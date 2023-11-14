@@ -8,15 +8,27 @@
 
 :focus-visible {
   // Default: will be removed in Forced Color Modes
-  box-shadow: 0 0 0 1px $primary-color;
+  box-shadow: 0 0 0 1px $zinc-100;
   // Fallback: will be visible with custom system colors in Forced Color Modes
   outline: 1px solid transparent;
+}
+
+::selection {
+  color: $zinc-100;
+  background-color: $zinc-700;
 }
 
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+}
+
+body {
+  color: $zinc-400;
+  background-color: $zinc-900;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
