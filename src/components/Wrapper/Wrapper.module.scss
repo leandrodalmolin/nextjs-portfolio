@@ -1,0 +1,30 @@
+@import '@/styles/_mixins.scss';
+
+.wrapper {
+  margin: auto;
+  padding-inline: 1.75rem;
+
+  &--sm {
+    max-width: 42rem;
+  }
+
+  &--md {
+    max-width: 48rem;
+  }
+
+  &--lg {
+    max-width: 56rem;
+  }
+
+  &--xl {
+    max-width: 64rem;
+  }
+
+  &--2xl {
+    max-width: 80rem;
+  }
+
+  @include media-query('md', 'up') {
+    padding-inline: 3rem;
+  }
+}
