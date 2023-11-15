@@ -1,7 +1,9 @@
-@import '@/styles/_mixins.scss';
-
 .section {
   padding-block: 5rem;
+
+  @include media-query('md', 'up') {
+    padding-block: 7rem;
+  }
 
   &--light {
     color: $zinc-600;
@@ -13,7 +15,7 @@
     background-color: $zinc-900;
   }
 
-  @include media-query('md', 'up') {
-    padding-block: 7rem;
+  &--no-padding {
+    padding: 0;
   }
 }

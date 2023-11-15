@@ -1,18 +1,16 @@
-import { Section, Wrapper } from '@/components'
+import { Wrapper, Masthead } from '@/components'
 
 export default function Home() {
   return (
     <div>
-      <Section theme="light">
-        <Wrapper size="md">
-          <h1>Light section</h1>
-        </Wrapper>
-      </Section>
-      <Section theme="dark">
+      <section className="section section--dark section--no-padding">
+        <Masthead />
+      </section>
+      <section className="section section--light">
         <Wrapper size="lg">
           <h1>Dark section</h1>
         </Wrapper>
-      </Section>
+      </section>
     </div>
   )
 }
