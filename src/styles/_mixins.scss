@@ -7,11 +7,11 @@
 
     @if $query == $name and $width {
       @if $direction == 'up' {
-        @media (min-width: #{$width}) {
+        @media screen and (min-width: #{$width}) {
           @content;
         }
       } @else if $direction == 'down' {
-        @media (max-width: #{$width}) {
+        @media screen and (max-width: #{$width}) {
           @content;
         }
       }
