@@ -9,10 +9,6 @@
   line-height: 2.5rem;
   color: $zinc-100;
 
-  .section--light & {
-    color: $zinc-900;
-  }
-
   @include media-query('sm', 'up') {
     font-size: 3rem;
     line-height: 1;

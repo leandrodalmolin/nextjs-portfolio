@@ -1,5 +1,7 @@
+export * from './Card'
 export * from './Heading'
 export * from './Link'
 export * from './Masthead'
 export * from './SideProjects'
+export * from './Work'
 export * from './Wrapper'

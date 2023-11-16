@@ -2,7 +2,7 @@
 @import '@/styles/_mixins.scss';
 
 .link {
-  transition: color 300ms;
+  transition: color 0.3s;
 
   &:hover {
     color: $zinc-100;
@@ -16,6 +16,7 @@
     font-weight: 700;
     line-height: 1.25rem;
     color: $zinc-300;
+    transition: color 0.3s, border-color 0.3s, background-color 0.3s;
 
     &:hover {
       border-color: $zinc-100;

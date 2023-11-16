@@ -8,6 +8,10 @@
   &--light {
     color: $zinc-600;
     background-color: $zinc-100;
+
+    h2 {
+      color: $zinc-900;
+    }
   }
 
   &--dark {
