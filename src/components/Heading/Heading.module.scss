@@ -1,0 +1,32 @@
+@import '@/styles/_mixins.scss';
+@import '@/styles/_variables.scss';
+
+.heading {
+  margin-bottom: 3.5rem;
+  font-family: $font-serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+  color: $zinc-100;
+
+  .section--light & {
+    color: $zinc-900;
+  }
+
+  @include media-query('sm', 'up') {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  @include media-query('md', 'up') {
+    margin-bottom: 5rem;
+  }
+}
+
+.subheading {
+  margin-bottom: 0.75rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
