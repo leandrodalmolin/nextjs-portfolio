@@ -13,7 +13,11 @@ export function Masthead() {
             web.
           </p>
           <p>
-            <Link variant="border" href="#" target="_blank">
+            <Link
+              variant="border"
+              href="/leandro-dal-molin-cv.pdf"
+              target="_blank"
+            >
               Curriculum Vitae
             </Link>
           </p>
