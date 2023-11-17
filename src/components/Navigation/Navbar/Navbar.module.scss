@@ -1,0 +1,77 @@
+@import '@/styles/_variables.scss';
+@import '@/styles/_mixins.scss';
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: all 0.7s;
+  z-index: 20;
+
+  &.open {
+    padding: 0.5rem;
+  }
+
+  &.close {
+    background-color: rgba($zinc-900, 0.8);
+    backdrop-filter: blur(4px);
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 1.25rem;
+  transition: padding 0.7s;
+
+  @include media-query('md', 'up') {
+    padding-block: 1.75rem;
+  }
+}
+
+.logo {
+  > div {
+    transition: font-size 0.7s;
+  }
+}
+
+.hamburger {
+  margin-right: -0.5rem;
+
+  @include media-query('md', 'up') {
+    display: none;
+  }
+}
+
+.menu {
+  display: none;
+
+  ul {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  @include media-query('md', 'up') {
+    display: block;
+  }
+}
+
+.navbar-scroll {
+  .nav {
+    padding-block: 0.25rem;
+  }
+
+  .logo {
+    > div {
+      font-size: 1.8rem;
+    }
+  }
+
+  @include media-query('sm', 'up') {
+    .nav {
+      padding-block: 0.5rem;
+    }
+  }
+}

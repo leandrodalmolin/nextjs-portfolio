@@ -1,0 +1,20 @@
+@import '@/styles/_variables.scss';
+@import '@/styles/_mixins.scss';
+
+.logo {
+  font-family: $font-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: $zinc-200;
+
+  span {
+    &:last-child {
+      color: $zinc-500;
+    }
+  }
+
+  @include media-query('sm', 'up') {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}

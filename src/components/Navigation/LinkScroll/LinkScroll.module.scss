@@ -1,0 +1,10 @@
+@import '@/styles/_variables.scss';
+
+.link {
+  transition: color 0.3s;
+
+  &.active,
+  &:hover {
+    color: $zinc-100;
+  }
+}
