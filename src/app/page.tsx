@@ -1,9 +1,9 @@
-import { Masthead, SideProjects, SkillSet, Work } from '@/components'
+import { About, Masthead, SideProjects, SkillSet, Work } from '@/components'
 
 export default function Home() {
   return (
     <div>
-      <section id="about" className="section section--dark section--no-padding">
+      <section className="section section--dark section--no-padding">
         <Masthead />
       </section>
       <section className="section section--light">
@@ -14,6 +14,9 @@ export default function Home() {
       </section>
       <section className="section section--light">
         <SkillSet />
+      </section>
+      <section className="section section--dark section--no-padding">
+        <About />
       </section>
     </div>
   )

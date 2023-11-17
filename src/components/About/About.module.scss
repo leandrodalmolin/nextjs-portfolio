@@ -1,0 +1,74 @@
+@import '@/styles/_variables.scss';
+@import '@/styles/_mixins.scss';
+
+.about {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.copy {
+  p {
+    margin-bottom: 1.25rem;
+  }
+
+  a {
+    border-bottom: 2px solid rgba($zinc-100, 0.1);
+    transition: border-color 0.3s;
+
+    &:hover {
+      border-color: rgba($zinc-100, 0.3);
+    }
+  }
+
+  @include media-query('sm', 'up') {
+    p {
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+    }
+  }
+}
+
+.intro {
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.375;
+  color: $zinc-300;
+
+  @include media-query('sm', 'up') {
+    font-size: 1.25rem;
+    line-height: 1.5;
+  }
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 1rem;
+  row-gap: 0.5rem;
+  margin-top: 2.75rem;
+  list-style: none;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: $zinc-300;
+  }
+
+  @include media-query('sm', 'up') {
+    column-gap: 1.75rem;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+
+    a {
+      gap: 0.5rem;
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+    }
+  }
+}
