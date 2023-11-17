@@ -1,4 +1,4 @@
-import { Wrapper, Masthead, SideProjects, Work } from '@/components'
+import { Masthead, SideProjects, SkillSet, Work } from '@/components'
 
 export default function Home() {
   return (
@@ -11,6 +11,9 @@ export default function Home() {
       </section>
       <section className="section section--dark">
         <SideProjects />
+      </section>
+      <section className="section section--light">
+        <SkillSet />
       </section>
     </div>
   )
