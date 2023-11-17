@@ -1,6 +1,5 @@
 import cn from 'classnames'
-import { Card, Heading, Wrapper } from '@/components'
-import { FadeInScroll } from '@/utils'
+import { Card, Heading, Wrapper, FadeInScroll } from '@/components'
 import styles from './Work.module.scss'
 
 const WORK_DATA = [

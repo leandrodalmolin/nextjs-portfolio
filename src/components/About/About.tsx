@@ -1,7 +1,6 @@
-import { FadeInScroll } from '@/utils'
-import { Heading, Link, Wrapper } from '@/components'
-import styles from './About.module.scss'
 import { FaEnvelope, FaFileAlt, FaGithub, FaLinkedin } from 'react-icons/fa'
+import { Heading, Link, Wrapper, FadeInScroll } from '@/components'
+import styles from './About.module.scss'
 
 export function About() {
   return (

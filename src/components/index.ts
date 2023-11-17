@@ -1,5 +1,7 @@
 export * from './About'
 export * from './Card'
+export * from './FadeIn'
+export * from './FadeInScroll'
 export * from './Heading'
 export * from './Link'
 export * from './Masthead'

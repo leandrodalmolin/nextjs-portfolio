@@ -1,5 +1,4 @@
-import { FadeInScroll } from '@/utils'
-import { Heading, Wrapper } from '@/components'
+import { Heading, Wrapper, FadeInScroll } from '@/components'
 import { FaReact, FaJsSquare, FaHtml5, FaCss3Alt, FaPhp } from 'react-icons/fa'
 import { SiNextdotjs } from 'react-icons/si'
 import styles from './SkillSet.module.scss'

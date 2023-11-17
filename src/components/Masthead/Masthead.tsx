@@ -1,5 +1,4 @@
-import { FadeIn } from '@/utils'
-import { Link, Wrapper } from '@/components'
+import { Link, Wrapper, FadeIn } from '@/components'
 import styles from './Masthead.module.scss'
 
 export function Masthead() {

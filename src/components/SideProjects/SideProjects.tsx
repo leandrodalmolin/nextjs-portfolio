@@ -1,5 +1,4 @@
-import { FadeInScroll } from '@/utils'
-import { Heading, Link, Wrapper } from '@/components'
+import { Heading, Link, Wrapper, FadeInScroll } from '@/components'
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa'
 import styles from './SideProjects.module.scss'
 

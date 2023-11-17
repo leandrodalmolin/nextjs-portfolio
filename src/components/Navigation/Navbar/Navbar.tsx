@@ -4,8 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import { CSSTransition } from 'react-transition-group'
 import { Squash as Hamburger } from 'hamburger-react'
 import cn from 'classnames'
-import { LinkScroll, Logo, Menu, Sidebar, Wrapper } from '@/components'
-import { FadeIn } from '@/utils'
+import { LinkScroll, Logo, Menu, Sidebar, Wrapper, FadeIn } from '@/components'
 import styles from './Navbar.module.scss'
 
 export function Navbar() {
