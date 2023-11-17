@@ -1,5 +1,6 @@
 import { Link, Wrapper, FadeIn } from '@/components'
 import styles from './Masthead.module.scss'
+import { NextSectionLink } from './NextSectionLink'
 
 export function Masthead() {
   return (
@@ -22,6 +23,7 @@ export function Masthead() {
           </p>
         </FadeIn>
       </Wrapper>
+      <NextSectionLink />
     </div>
   )
 }
