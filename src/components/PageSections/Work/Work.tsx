@@ -1,5 +1,5 @@
 import cn from 'classnames'
-import { Card, Heading, Wrapper, FadeInScroll } from '@/components'
+import { Card, Heading, Wrapper, FadeInScroll, Section } from '@/components'
 import styles from './Work.module.scss'
 
 const WORK_DATA = [
@@ -52,38 +52,41 @@ const WORK_DATA = [
 
 export function Work() {
   return (
-    <Wrapper size="2xl">
-      <FadeInScroll>
-        <div className={styles.header}>
-          <Heading
-            heading="Selected Work"
-            subheading="© Artworking/Golfworking"
-          />
-        </div>
-      </FadeInScroll>
-      <div className={styles.grid}>
-        {WORK_DATA.map((work, index) => {
-          const lastItem = WORK_DATA.length - 1 === index
-          const itemClasses = cn(styles.item, {
-            [styles['last-item']]: lastItem,
-          })
-          return (
-            <div key={work.id} className={itemClasses}>
-              <div className={styles['item-container']}>
-                <FadeInScroll>
-                  <Card
-                    title={work.title}
-                    description={work.description}
-                    url={work.url}
-                    imageSrc={work.imageSrc}
-                    bgColor={work.bgColor}
-                  />
-                </FadeInScroll>
+    <Section id="work" theme="light">
+      <Wrapper size="2xl">
+        <FadeInScroll>
+          <div className={styles.header}>
+            <Heading
+              heading="Selected Work"
+              subheading="© Artworking/Golfworking"
+              theme="light"
+            />
+          </div>
+        </FadeInScroll>
+        <div className={styles.grid}>
+          {WORK_DATA.map((work, index) => {
+            const lastItem = WORK_DATA.length - 1 === index
+            const itemClasses = cn(styles.item, {
+              [styles['last-item']]: lastItem,
+            })
+            return (
+              <div key={work.id} className={itemClasses}>
+                <div className={styles['item-container']}>
+                  <FadeInScroll>
+                    <Card
+                      title={work.title}
+                      description={work.description}
+                      url={work.url}
+                      imageSrc={work.imageSrc}
+                      bgColor={work.bgColor}
+                    />
+                  </FadeInScroll>
+                </div>
               </div>
-            </div>
-          )
-        })}
-      </div>
-    </Wrapper>
+            )
+          })}
+        </div>
+      </Wrapper>
+    </Section>
   )
 }

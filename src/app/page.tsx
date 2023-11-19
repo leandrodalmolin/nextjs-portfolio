@@ -2,6 +2,7 @@ import {
   About,
   Masthead,
   Navbar,
+  Section,
   SideProjects,
   SkillSet,
   Work,
@@ -12,27 +13,11 @@ export default function Home() {
     <>
       <Navbar />
       <main>
-        <section
-          id="home"
-          className="section section--dark section--no-padding"
-        >
-          <Masthead />
-        </section>
-        <section id="work" className="section section--light">
-          <Work />
-        </section>
-        <section id="projects" className="section section--dark">
-          <SideProjects />
-        </section>
-        <section id="tech" className="section section--light">
-          <SkillSet />
-        </section>
-        <section
-          id="about"
-          className="section section--dark section--no-padding"
-        >
-          <About />
-        </section>
+        <Masthead />
+        <Work />
+        <SideProjects />
+        <SkillSet />
+        <About />
       </main>
     </>
   )

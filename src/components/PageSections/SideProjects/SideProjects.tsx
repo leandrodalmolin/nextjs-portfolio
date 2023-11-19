@@ -1,4 +1,4 @@
-import { Heading, Link, Wrapper, FadeInScroll } from '@/components'
+import { Heading, Link, Wrapper, FadeInScroll, Section } from '@/components'
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa'
 import styles from './SideProjects.module.scss'
 
@@ -52,32 +52,34 @@ export function SideProjects() {
   }
 
   return (
-    <Wrapper size="lg">
-      <FadeInScroll>
-        <div className={styles.header}>
-          <Heading heading="Side Projects" subheading="Pinned from GitHub" />
-        </div>
-      </FadeInScroll>
-      <FadeInScroll>
-        <ul className={styles.grid}>
-          {DATA.map((item) => (
-            <li key={item.id} className={styles.item}>
-              <h4>{item.title}</h4>
-              <p>{item.description}</p>
-              <ul>
-                {item.links.map((link) => (
-                  <li key={link.id}>
-                    <Link href={link.url} target="_blank">
-                      {renderIcon(link.icon)}
-                      {link.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </li>
-          ))}
-        </ul>
-      </FadeInScroll>
-    </Wrapper>
+    <Section id="projects">
+      <Wrapper size="lg">
+        <FadeInScroll>
+          <div className={styles.header}>
+            <Heading heading="Side Projects" subheading="Pinned from GitHub" />
+          </div>
+        </FadeInScroll>
+        <FadeInScroll>
+          <ul className={styles.grid}>
+            {DATA.map((item) => (
+              <li key={item.id} className={styles.item}>
+                <h4>{item.title}</h4>
+                <p>{item.description}</p>
+                <ul>
+                  {item.links.map((link) => (
+                    <li key={link.id}>
+                      <Link href={link.url} target="_blank">
+                        {renderIcon(link.icon)}
+                        {link.title}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            ))}
+          </ul>
+        </FadeInScroll>
+      </Wrapper>
+    </Section>
   )
 }

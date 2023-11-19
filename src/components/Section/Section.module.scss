@@ -1,0 +1,24 @@
+@import '@/styles/_variables.scss';
+@import '@/styles/_mixins.scss';
+
+.container {
+  padding-block: $spacing-11;
+
+  @include media-query('md', 'up') {
+    padding-block: $spacing-12;
+  }
+}
+
+.light {
+  color: $zinc-600;
+  background-color: $zinc-100;
+}
+
+.dark {
+  color: $zinc-400;
+  background-color: $zinc-900;
+}
+
+.no-padding {
+  padding: 0;
+}
