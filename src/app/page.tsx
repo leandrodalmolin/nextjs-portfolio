@@ -2,7 +2,6 @@ import {
   About,
   Masthead,
   Navbar,
-  Section,
   SideProjects,
   SkillSet,
   Work,

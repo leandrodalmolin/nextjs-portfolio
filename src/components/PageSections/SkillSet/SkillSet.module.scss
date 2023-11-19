@@ -1,10 +1,6 @@
 @import '@/styles/_variables.scss';
 @import '@/styles/_mixins.scss';
 
-.header {
-  text-align: center;
-}
-
 .list {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

@@ -55,13 +55,11 @@ export function Work() {
     <Section id="work" theme="light">
       <Wrapper size="2xl">
         <FadeInScroll>
-          <div className={styles.header}>
-            <Heading
-              heading="Selected Work"
-              subheading="© Artworking/Golfworking"
-              theme="light"
-            />
-          </div>
+          <Heading
+            heading="Selected Work"
+            subheading="© Artworking/Golfworking"
+            theme="light"
+          />
         </FadeInScroll>
         <div className={styles.grid}>
           {WORK_DATA.map((work, index) => {

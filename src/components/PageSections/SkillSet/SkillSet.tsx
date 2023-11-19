@@ -8,13 +8,11 @@ export function SkillSet() {
     <Section id="tech" theme="light">
       <Wrapper size="lg">
         <FadeInScroll>
-          <div className={styles.header}>
-            <Heading
-              heading="Skill Set"
-              subheading="Technologies I Use"
-              theme="light"
-            />
-          </div>
+          <Heading
+            heading="Skill Set"
+            subheading="Technologies I Use"
+            theme="light"
+          />
         </FadeInScroll>
         <FadeInScroll>
           <ul className={styles.list}>

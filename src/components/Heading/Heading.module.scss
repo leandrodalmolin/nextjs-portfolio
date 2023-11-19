@@ -1,6 +1,10 @@
 @import '@/styles/_mixins.scss';
 @import '@/styles/_variables.scss';
 
+.container {
+  text-align: center;
+}
+
 .heading {
   margin-bottom: $spacing-9;
   font-family: $font-serif;

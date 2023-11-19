@@ -4,9 +4,9 @@ import cn from 'classnames'
 
 export function Heading({ heading, subheading, theme = 'dark' }: IHeading) {
   return (
-    <>
+    <div className={styles.container}>
       <p className={styles.subheading}>{subheading}</p>
       <h2 className={cn(styles.heading, styles[theme])}>{heading}</h2>
-    </>
+    </div>
   )
 }

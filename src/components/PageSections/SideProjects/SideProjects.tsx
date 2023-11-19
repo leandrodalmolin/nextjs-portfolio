@@ -55,9 +55,7 @@ export function SideProjects() {
     <Section id="projects">
       <Wrapper size="lg">
         <FadeInScroll>
-          <div className={styles.header}>
-            <Heading heading="Side Projects" subheading="Pinned from GitHub" />
-          </div>
+          <Heading heading="Side Projects" subheading="Pinned from GitHub" />
         </FadeInScroll>
         <FadeInScroll>
           <ul className={styles.grid}>
