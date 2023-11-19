@@ -3,8 +3,8 @@
 
 .logo {
   font-family: $font-serif;
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: $font-size-4xl;
+  font-weight: $font-weight-bold;
   color: $zinc-200;
 
   span {
@@ -14,7 +14,7 @@
   }
 
   @include media-query('sm', 'up') {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
+    font-size: $font-size-5xl;
+    line-height: $line-height-xs;
   }
 }

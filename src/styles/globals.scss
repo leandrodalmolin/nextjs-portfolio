@@ -34,8 +34,8 @@ input,
 button,
 textarea {
   font-family: $font-sans;
-  font-weight: 400;
-  font-size: 1rem;
+  font-weight: $font-weight-regular;
+  font-size: $font-size-md;
 }
 
 a {

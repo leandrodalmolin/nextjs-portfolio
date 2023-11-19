@@ -4,14 +4,13 @@
 .heading {
   margin-bottom: $spacing-9;
   font-family: $font-serif;
-  font-size: 2.25rem;
-  font-weight: 700;
-  line-height: 2.5rem;
+  font-size: $font-size-5xl;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-none;
   color: $zinc-100;
 
   @include media-query('sm', 'up') {
-    font-size: 3rem;
-    line-height: 1;
+    font-size: $font-size-6xl;
   }
 
   @include media-query('md', 'up') {
@@ -21,8 +20,8 @@
 
 .subheading {
   margin-bottom: $spacing-4;
-  font-size: 0.75rem;
-  line-height: 1rem;
-  font-weight: 500;
+  font-size: $font-size-xs;
+  line-height: $line-height-sm;
+  font-weight: $font-weight-medium;
   text-transform: uppercase;
 }

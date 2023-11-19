@@ -23,9 +23,8 @@
 
   h2 {
     margin-bottom: $spacing-4;
-    font-size: 1.25rem;
-    font-weight: 700;
-    line-height: 1.75rem;
+    font-size: $font-size-xl;
+    font-weight: $font-weight-bold;
     color: $zinc-100;
   }
 

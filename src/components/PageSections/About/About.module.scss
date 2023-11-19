@@ -24,21 +24,21 @@
 
   @include media-query('sm', 'up') {
     p {
-      font-size: 1.125rem;
-      line-height: 1.75rem;
+      font-size: $font-size-lg;
+      line-height: $line-height-md;
     }
   }
 }
 
 .intro {
-  font-size: 1.125rem;
-  font-weight: 700;
-  line-height: 1.375;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-sm;
   color: $zinc-300;
 
   @include media-query('sm', 'up') {
-    font-size: 1.25rem;
-    line-height: 1.5;
+    font-size: $font-size-xl;
+    line-height: $line-height-md;
   }
 }
 
@@ -55,20 +55,17 @@
     display: inline-flex;
     align-items: center;
     gap: $spacing-2;
-    font-size: 1rem;
-    line-height: 1.5rem;
+    font-size: $font-size-md;
     color: $zinc-300;
   }
 
   @include media-query('sm', 'up') {
     column-gap: $spacing-7;
-    font-size: 1.125rem;
-    line-height: 1.75rem;
+    font-size: $font-size-lg;
 
     a {
       gap: $spacing-3;
-      font-size: 1.125rem;
-      line-height: 1.75rem;
+      font-size: $font-size-lg;
     }
   }
 }

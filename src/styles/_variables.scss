@@ -3,6 +3,28 @@ $breakpoints: ('sm' 640px, 'md' 768px, 'lg' 1024px, 'xl' 1280px, '2xl' 1536px);
 $font-sans: var(--font-dm-sans);
 $font-serif: var(--font-libre);
 
+$font-size-xs: 0.75rem; // 12px
+$font-size-sm: 0.875rem; // 14px
+$font-size-md: 1rem; // 16px
+$font-size-lg: 1.125rem; // 18px
+$font-size-xl: 1.25rem; // 20px
+$font-size-2xl: 1.5rem; // 24px
+$font-size-3xl: 1.75rem; // 28px
+$font-size-4xl: 2rem; // 32px
+$font-size-5xl: 2.25rem; // 36px
+$font-size-6xl: 3rem; // 48px
+
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+$line-height-none: 1;
+$line-height-xs: 1.25;
+$line-height-sm: 1.375;
+$line-height-md: 1.5;
+$line-height-lg: 1.725;
+$line-height-xl: 2;
+
 $radius-md: 6px;
 
 $white: #fff;
