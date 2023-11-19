@@ -2,7 +2,7 @@
 @import '@/styles/_variables.scss';
 
 .card {
-  border-radius: 0.375rem;
+  border-radius: $radius-md;
   padding: 10% 10% 0;
   background-color: $zinc-800;
 
@@ -51,7 +51,7 @@
     display: inline-flex;
     align-items: center;
     gap: $spacing-3;
-    border-bottom: 2px solid rgba($white, 0.2);
+    border-bottom: $spacing-1 solid rgba($white, 0.2);
     color: rgba($white, 0.6);
     transition: border-color 0.3s, color 0.3s;
 
@@ -70,13 +70,10 @@
 }
 
 .image {
+  border-radius: $radius-md $radius-md 0 0;
+  border: $spacing-3 solid rgba($white, 0.1);
+  border-bottom: 0;
   margin-top: $spacing-8;
-  border-top-width: 8px;
-  border-left-width: 8px;
-  border-right-width: 8px;
-  border-color: rgba($white, 0.1);
-  border-top-left-radius: 0.375rem;
-  border-top-right-radius: 0.375rem;
   overflow: hidden;
 
   img {
