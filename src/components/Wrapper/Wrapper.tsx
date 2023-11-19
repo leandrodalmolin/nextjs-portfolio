@@ -3,7 +3,7 @@ import styles from './Wrapper.module.scss'
 import classNames from 'classnames'
 
 export function Wrapper({ size = 'sm', children, ...rest }: IWrapper) {
-  const classes = classNames(styles.wrapper, styles[`wrapper--${size}`])
+  const classes = classNames(styles.wrapper, styles[size])
   return (
     <div className={classes} {...rest}>
       {children}

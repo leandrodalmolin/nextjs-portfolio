@@ -8,13 +8,12 @@
     color: $zinc-100;
   }
 
-  &--border {
+  &.border {
     border: 2px solid rgba($zinc-100, 0.2);
     border-radius: $radius-md;
     padding: $spacing-3 $spacing-6;
     font-size: $font-size-sm;
     font-weight: $font-weight-bold;
-    line-height: $line-height-md;
     color: $zinc-300;
     transition: color 0.3s, border-color 0.3s, background-color 0.3s;
 

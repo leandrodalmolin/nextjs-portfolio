@@ -5,7 +5,7 @@ import styles from './About.module.scss'
 export function About() {
   return (
     <Section id="about" noPadding>
-      <div className={styles.about}>
+      <div className={styles.container}>
         <Wrapper>
           <FadeInScroll>
             <Heading heading="About Me" subheading="Who am I?" />

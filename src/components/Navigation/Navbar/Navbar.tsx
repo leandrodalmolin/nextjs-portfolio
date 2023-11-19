@@ -39,13 +39,13 @@ export function Navbar() {
   const classes = cn(styles.navbar, {
     [styles.open]: isSidebarOpen,
     [styles.close]: !isSidebarOpen,
-    [styles['navbar-scroll']]: isScrolling,
+    [styles.scroll]: isScrolling,
   })
 
   return (
     <>
       <header className={classes}>
-        <Wrapper size="2xl">
+        <Wrapper size="xxl">
           <nav className={styles.nav}>
             <FadeIn delay={1000}>
               <LinkScroll to="home" href="#home" onClick={handleCloseSidebar}>

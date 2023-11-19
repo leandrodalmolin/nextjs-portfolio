@@ -16,6 +16,24 @@
     background-color: rgba($zinc-900, 0.8);
     backdrop-filter: blur(4px);
   }
+
+  &.scroll {
+    .nav {
+      padding-block: $spacing-2;
+    }
+
+    .logo {
+      > div {
+        font-size: $font-size-4xl;
+      }
+    }
+
+    @include media-query('sm', 'up') {
+      .nav {
+        padding-block: $spacing-3;
+      }
+    }
+  }
 }
 
 .nav {
@@ -50,28 +68,9 @@
   ul {
     display: flex;
     gap: $spacing-8;
-    list-style: none;
   }
 
   @include media-query('md', 'up') {
     display: block;
-  }
-}
-
-.navbar-scroll {
-  .nav {
-    padding-block: $spacing-2;
-  }
-
-  .logo {
-    > div {
-      font-size: $font-size-3xl;
-    }
-  }
-
-  @include media-query('sm', 'up') {
-    .nav {
-      padding-block: $spacing-3;
-    }
   }
 }

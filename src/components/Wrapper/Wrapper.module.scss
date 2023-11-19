@@ -5,23 +5,23 @@
   margin: auto;
   padding-inline: $spacing-7;
 
-  &--sm {
+  &.sm {
     max-width: 42rem;
   }
 
-  &--md {
+  &.md {
     max-width: 48rem;
   }
 
-  &--lg {
+  &.lg {
     max-width: 56rem;
   }
 
-  &--xl {
+  &.xl {
     max-width: 64rem;
   }
 
-  &--2xl {
+  &.xxl {
     max-width: 80rem;
   }
 

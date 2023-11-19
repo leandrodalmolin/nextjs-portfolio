@@ -7,15 +7,13 @@ import Image from 'next/image'
 export function Card({ title, description, url, imageSrc, bgColor }: ICard) {
   return (
     <div className={styles.card} style={{ backgroundColor: bgColor }}>
-      <h3>{title}</h3>
-      <div className={styles.content}>
+      <h3 className={styles.heading}>{title}</h3>
+      <div className={styles.copy}>
         <p>{description}</p>
-        <p>
-          <Link href={url} target="_blank" rel="nofollow noreferrer noopener">
-            Visit Website
-            <FaLongArrowAltRight />
-          </Link>
-        </p>
+        <Link href={url} target="_blank" rel="nofollow noreferrer noopener">
+          Visit Website
+          <FaLongArrowAltRight />
+        </Link>
       </div>
       <div className={styles.image}>
         <Image src={imageSrc} alt={title} width={500} height={500} priority />

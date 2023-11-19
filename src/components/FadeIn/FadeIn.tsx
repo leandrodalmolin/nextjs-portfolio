@@ -14,8 +14,8 @@ export function FadeIn({ delay = 0, children }: IFadeIn) {
     }, delay)
   }, [delay])
 
-  const classes = cn(styles['fade-in'], {
-    [styles['fade-in--active']]: isActive,
+  const classes = cn(styles.container, {
+    [styles.active]: isActive,
   })
   return <div className={classes}>{children}</div>
 }

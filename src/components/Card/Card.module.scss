@@ -6,23 +6,11 @@
   padding: 10% 10% 0;
   background-color: $zinc-800;
 
-  h3 {
-    margin-bottom: $spacing-5;
-    font-size: $font-size-2xl;
-    font-weight: $font-weight-bold;
-    line-height: $line-height-sm;
-    color: $white;
-  }
-
   @include media-query('md', 'up') {
     margin-top: 8%;
 
-    h3 {
-      margin-bottom: $spacing-6;
-    }
-
     &:hover {
-      .content {
+      .copy {
         max-height: 50rem;
         opacity: 1;
         visibility: visible;
@@ -35,15 +23,25 @@
   }
 }
 
-.content {
-  p {
-    font-size: $font-size-sm;
+.heading {
+  margin-bottom: $spacing-5;
+  font-size: $font-size-2xl;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-sm;
+  color: $white;
 
-    &:first-child {
-      margin-bottom: $spacing-6;
-      line-height: $line-height-lg;
-      color: rgba($white, 0.6);
-    }
+  @include media-query('md', 'up') {
+    margin-bottom: $spacing-6;
+  }
+}
+
+.copy {
+  font-size: $font-size-sm;
+
+  p {
+    margin-bottom: $spacing-6;
+    line-height: $line-height-lg;
+    color: rgba($white, 0.6);
   }
 
   a {

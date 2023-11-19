@@ -8,7 +8,7 @@ export function Section({
   noPadding = false,
   children,
 }: ISection) {
-  const classes = cn(styles.container, styles[theme], {
+  const classes = cn(styles.section, styles[theme], {
     [styles['no-padding']]: noPadding,
   })
   return (

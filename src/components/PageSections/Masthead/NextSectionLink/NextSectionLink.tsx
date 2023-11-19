@@ -5,7 +5,7 @@ import styles from './NextSectionLink.module.scss'
 
 export function NextSectionLink() {
   return (
-    <div className={styles.link}>
+    <div className={styles.container}>
       <ReactScrollLink
         smooth="easeOutQuart"
         duration={1500}

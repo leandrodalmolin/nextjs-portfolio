@@ -21,7 +21,6 @@
     font-size: $font-size-5xl;
     font-weight: $font-weight-bold;
     line-height: $line-height-xs;
-    list-style: none;
   }
 
   @include media-query('md', 'up') {

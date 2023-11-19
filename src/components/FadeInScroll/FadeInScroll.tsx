@@ -33,8 +33,8 @@ export function FadeInScroll({ children }: IFadeInScroll) {
     }
   }, [isVisible])
 
-  const classes = cn(styles['fade-in-scroll'], {
-    [styles['is-visible']]: isVisible,
+  const classes = cn(styles.container, {
+    [styles.visible]: isVisible,
   })
 
   return (

@@ -2,14 +2,14 @@
   TODO: Implement prefers-reduced-motion.
   Read more: https://css-tricks.com/revisiting-prefers-reduced-motion/
 */
-.fade-in-scroll {
+.container {
   opacity: 0;
   transform: translateY(150px);
   visibility: hidden;
   transition: opacity 1.5s, transform 1.5s, visibility 1.5s;
   will-change: opacity, transform, visibility;
 
-  &.is-visible {
+  &.visible {
     opacity: 1;
     transform: none;
     visibility: visible;

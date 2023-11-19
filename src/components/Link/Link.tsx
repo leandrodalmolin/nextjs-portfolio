@@ -4,7 +4,7 @@ import { ILink } from './Link.types'
 
 export function Link({ variant = 'default', children, ...rest }: ILink) {
   const classes = cn(styles.link, {
-    [styles['link--border']]: variant === 'border',
+    [styles.border]: variant === 'border',
   })
   return (
     <a className={classes} {...rest}>

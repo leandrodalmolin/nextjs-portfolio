@@ -1,7 +1,7 @@
 @import '@/styles/_variables.scss';
 @import '@/styles/_mixins.scss';
 
-.masthead {
+.container {
   position: relative;
   display: flex;
   justify-content: center;
@@ -9,49 +9,39 @@
   height: 40rem;
   text-align: center;
 
-  h1 {
-    margin-bottom: $spacing-6;
-    font-family: $font-serif;
-    font-size: $font-size-2xl;
-    line-height: $line-height-md;
-    color: $zinc-100;
+  @include media-query('md', 'up') {
+    height: 100vh;
   }
+}
 
-  p {
-    font-size: $font-size-xl;
-    line-height: $line-height-xs;
-  }
-
-  a {
-    display: inline-block;
-    margin-top: $spacing-7;
-  }
+.heading {
+  margin-bottom: $spacing-6;
+  font-family: $font-serif;
+  font-size: $font-size-2xl;
+  color: $zinc-100;
 
   @include media-query('sm', 'up') {
-    h1 {
-      margin-bottom: $spacing-7;
-      font-size: $font-size-5xl;
-    }
-
-    p {
-      font-size: $font-size-3xl;
-    }
+    margin-bottom: $spacing-7;
+    font-size: $font-size-5xl;
   }
 
   @include media-query('md', 'up') {
-    height: 100vh;
+    margin-top: $spacing-7;
+    font-size: $font-size-6xl;
+  }
+}
 
-    h1 {
-      margin-top: $spacing-7;
-      font-size: $font-size-6xl;
-    }
+.subheading {
+  margin-bottom: $spacing-7;
+  font-size: $font-size-xl;
+  line-height: $line-height-xs;
 
-    p {
-      font-size: $font-size-5xl;
-    }
+  @include media-query('sm', 'up') {
+    font-size: $font-size-3xl;
+  }
 
-    a {
-      margin-top: $spacing-8;
-    }
+  @include media-query('md', 'up') {
+    margin-bottom: $spacing-8;
+    font-size: $font-size-5xl;
   }
 }

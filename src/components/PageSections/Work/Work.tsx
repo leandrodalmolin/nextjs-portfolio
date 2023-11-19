@@ -53,7 +53,7 @@ const WORK_DATA = [
 export function Work() {
   return (
     <Section id="work" theme="light">
-      <Wrapper size="2xl">
+      <Wrapper size="xxl">
         <FadeInScroll>
           <Heading
             heading="Selected Work"
