@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next'
-import { dmSans, libre, metadata as meta } from '@/utils'
+import { dmSans, isProduction, libre, metadata as meta } from '@/utils'
+import { GoogleAnalytics } from '@/components'
 import '@/styles/globals.scss'
 
 export const metadata: Metadata = meta
@@ -15,6 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${dmSans.variable} ${libre.variable}`}>
+      {isProduction() && <GoogleAnalytics />}
       <body>{children}</body>
     </html>
   )
