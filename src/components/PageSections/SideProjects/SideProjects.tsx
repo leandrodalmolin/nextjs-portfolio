@@ -62,7 +62,7 @@ export function SideProjects() {
         <ul className={styles.grid}>
           {DATA.map((item) => (
             <li key={item.id} className={styles.item}>
-              <h2>{item.title}</h2>
+              <h4>{item.title}</h4>
               <p>{item.description}</p>
               <ul>
                 {item.links.map((link) => (

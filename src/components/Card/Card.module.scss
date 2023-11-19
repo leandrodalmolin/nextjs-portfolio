@@ -6,7 +6,7 @@
   padding: 10% 10% 0;
   background-color: $zinc-800;
 
-  h2 {
+  h3 {
     margin-bottom: $spacing-5;
     font-size: $font-size-2xl;
     font-weight: $font-weight-bold;
@@ -17,7 +17,7 @@
   @include media-query('md', 'up') {
     margin-top: 8%;
 
-    h2 {
+    h3 {
       margin-bottom: $spacing-6;
     }
 

@@ -7,7 +7,7 @@ import Image from 'next/image'
 export function Card({ title, description, url, imageSrc, bgColor }: ICard) {
   return (
     <div className={styles.card} style={{ backgroundColor: bgColor }}>
-      <h2>{title}</h2>
+      <h3>{title}</h3>
       <div className={styles.content}>
         <p>{description}</p>
         <p>
