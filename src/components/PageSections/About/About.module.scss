@@ -10,7 +10,7 @@
 
 .copy {
   p {
-    margin-bottom: 1.25rem;
+    margin-bottom: $spacing-6;
   }
 
   a {
@@ -46,27 +46,27 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  column-gap: 1rem;
-  row-gap: 0.5rem;
-  margin-top: 2.75rem;
+  column-gap: $spacing-5;
+  row-gap: $spacing-3;
+  margin-top: $spacing-8;
   list-style: none;
 
   a {
     display: inline-flex;
     align-items: center;
-    gap: 0.25rem;
+    gap: $spacing-2;
     font-size: 1rem;
     line-height: 1.5rem;
     color: $zinc-300;
   }
 
   @include media-query('sm', 'up') {
-    column-gap: 1.75rem;
+    column-gap: $spacing-7;
     font-size: 1.125rem;
     line-height: 1.75rem;
 
     a {
-      gap: 0.5rem;
+      gap: $spacing-3;
       font-size: 1.125rem;
       line-height: 1.75rem;
     }

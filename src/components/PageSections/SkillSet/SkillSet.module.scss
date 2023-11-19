@@ -8,14 +8,14 @@
 .list {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.75rem;
-  margin-top: 3.5rem;
+  gap: $spacing-7;
+  margin-top: $spacing-10;
   color: $zinc-600;
   list-style: none;
 
   svg {
-    width: 5rem;
-    height: 4rem;
+    width: $spacing-11;
+    height: $spacing-10;
     margin: auto;
     transition: color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -29,12 +29,12 @@
   }
 
   @include media-query('md', 'up') {
-    gap: 4rem;
-    margin-top: 5rem;
+    gap: $spacing-10;
+    margin-top: $spacing-11;
 
     svg {
-      width: 6rem;
-      height: 5rem;
+      width: $spacing-12;
+      height: $spacing-11;
     }
   }
 }

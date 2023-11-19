@@ -2,7 +2,7 @@
 
 .wrapper {
   margin: auto;
-  padding-inline: 1.75rem;
+  padding-inline: $spacing-7;
 
   &--sm {
     max-width: 42rem;
@@ -25,6 +25,6 @@
   }
 
   @include media-query('md', 'up') {
-    padding-inline: 3rem;
+    padding-inline: $spacing-9;
   }
 }

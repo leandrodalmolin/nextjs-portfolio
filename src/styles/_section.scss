@@ -1,8 +1,8 @@
 .section {
-  padding-block: 5rem;
+  padding-block: $spacing-11;
 
   @include media-query('md', 'up') {
-    padding-block: 7rem;
+    padding-block: $spacing-12;
   }
 
   &--light {

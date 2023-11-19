@@ -7,7 +7,7 @@
   background-color: $zinc-800;
 
   h2 {
-    margin-bottom: 1rem;
+    margin-bottom: $spacing-5;
     font-size: 1.5rem;
     font-weight: 700;
     line-height: 2rem;
@@ -18,18 +18,18 @@
     margin-top: 8%;
 
     h2 {
-      margin-bottom: 1.75rem;
+      margin-bottom: $spacing-6;
     }
 
     &:hover {
       .content {
-        max-height: 800px;
+        max-height: 50rem;
         opacity: 1;
         visibility: visible;
       }
 
       .image {
-        margin-top: 2.5rem;
+        margin-top: $spacing-8;
       }
     }
   }
@@ -41,7 +41,7 @@
     line-height: 1.25rem;
 
     &:first-child {
-      margin-bottom: 1.5rem;
+      margin-bottom: $spacing-6;
       line-height: 1.625;
       color: rgba($white, 0.6);
     }
@@ -50,7 +50,7 @@
   a {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: $spacing-3;
     border-bottom: 2px solid rgba($white, 0.2);
     color: rgba($white, 0.6);
     transition: border-color 0.3s, color 0.3s;
@@ -70,7 +70,7 @@
 }
 
 .image {
-  margin-top: 2.5rem;
+  margin-top: $spacing-8;
   border-top-width: 8px;
   border-left-width: 8px;
   border-right-width: 8px;

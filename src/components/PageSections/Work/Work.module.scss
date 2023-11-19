@@ -7,11 +7,11 @@
 
 .grid {
   display: grid;
-  gap: 1.75rem;
+  gap: $spacing-7;
 
   @include media-query('md', 'up') {
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 2.5rem;
+    gap: $spacing-8;
   }
 }
 

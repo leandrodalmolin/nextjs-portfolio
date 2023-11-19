@@ -9,7 +9,7 @@
   z-index: 20;
 
   &.open {
-    padding: 0.5rem;
+    padding: $spacing-3;
   }
 
   &.close {
@@ -22,11 +22,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-block: 1.25rem;
+  padding-block: $spacing-6;
   transition: padding 0.7s;
 
   @include media-query('md', 'up') {
-    padding-block: 1.75rem;
+    padding-block: $spacing-7;
   }
 }
 
@@ -37,7 +37,7 @@
 }
 
 .hamburger {
-  margin-right: -0.5rem;
+  margin-right: -$spacing-3;
 
   @include media-query('md', 'up') {
     display: none;
@@ -49,7 +49,7 @@
 
   ul {
     display: flex;
-    gap: 2.5rem;
+    gap: $spacing-8;
     list-style: none;
   }
 
@@ -60,7 +60,7 @@
 
 .navbar-scroll {
   .nav {
-    padding-block: 0.25rem;
+    padding-block: $spacing-2;
   }
 
   .logo {
@@ -71,7 +71,7 @@
 
   @include media-query('sm', 'up') {
     .nav {
-      padding-block: 0.5rem;
+      padding-block: $spacing-3;
     }
   }
 }

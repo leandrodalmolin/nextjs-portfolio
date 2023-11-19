@@ -4,7 +4,6 @@ $font-sans: var(--font-dm-sans);
 $font-serif: var(--font-libre);
 
 $white: #fff;
-
 $zinc-50: #fafafa;
 $zinc-100: #f4f4f5;
 $zinc-200: #e4e4e7;
@@ -15,4 +14,17 @@ $zinc-600: #52525b;
 $zinc-700: #3f3f46;
 $zinc-800: #27272a;
 $zinc-900: #18181b;
-$zinc-950: #09090b;
+
+$spacing-1: 0.125rem; // 2px
+$spacing-2: 0.25rem; // 4px
+$spacing-3: 0.5rem; // 8px
+$spacing-4: 0.75rem; // 12px
+$spacing-5: 1rem; // 16px
+$spacing-6: 1.5rem; // 24px
+$spacing-7: 2rem; // 32px
+$spacing-8: 2.5rem; // 40px
+$spacing-9: 3rem; // 48px
+$spacing-10: 4rem; // 64px
+$spacing-11: 5rem; // 80px
+$spacing-12: 6rem; // 96px
+$spacing-13: 10rem; // 160px
