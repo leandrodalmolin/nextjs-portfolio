@@ -6,14 +6,16 @@ export function Section({
   id,
   theme = 'dark',
   noPadding = false,
+  fullHeight = false,
   children,
 }: ISection) {
   const classes = cn(styles.section, styles[theme], {
     [styles['no-padding']]: noPadding,
+    [styles['full-height']]: fullHeight,
   })
   return (
     <section id={id} className={classes}>
-      {children}
+      <div>{children}</div>
     </section>
   )
 }
