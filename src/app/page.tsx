@@ -6,8 +6,12 @@ import {
   SkillSet,
   Work,
 } from '@/components'
+import { getPage } from '@/lib'
 
-export default function Home() {
+export default async function Home() {
+  const data = await getPage('home')
+  console.log(data)
+
   return (
     <>
       <Navbar />
