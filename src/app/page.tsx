@@ -9,8 +9,8 @@ import {
 import { getPage } from '@/lib'
 
 export default async function Home() {
-  const data = await getPage('home')
-  console.log(data)
+  const { page } = await getPage('home')
+  console.log(page.sections)
 
   return (
     <>

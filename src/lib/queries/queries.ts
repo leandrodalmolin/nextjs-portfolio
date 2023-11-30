@@ -1,6 +1,6 @@
-import { fetchData } from '.'
+import { IPageData, fetchData } from '..'
 
-export async function getPage(slug: string) {
+export async function getPage(slug: string): Promise<IPageData> {
   return fetchData(`
     query PageQuery {
       page(where: {slug: "${slug}"}) {
@@ -20,7 +20,7 @@ export async function getPage(slug: string) {
             component {
               ... on About {
                 id
-                content {
+                about {
                   html
                 }
               }
@@ -56,6 +56,7 @@ export async function getPage(slug: string) {
               ... on WorksList {
                 id
                 work {
+                  id
                   title
                   description
                   siteUrl
