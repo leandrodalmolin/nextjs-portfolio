@@ -12,7 +12,7 @@ type TProjectLink = {
   id: string
   text: string
   url: string
-  external: boolean,
+  external: boolean
   icon: 'Github' | 'External' | null
 }
 
@@ -30,7 +30,7 @@ type TWork = {
   siteUrl: string
   image: {
     url: string
-  },
+  }
   cardColour: {
     hex: string
   }

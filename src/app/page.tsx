@@ -6,11 +6,12 @@ import {
   SkillSet,
   Work,
 } from '@/components'
-import { getPage } from '@/lib'
+import { getPage } from '@/api'
 
 export default async function Home() {
-  const { page } = await getPage('home')
-  console.log(page.sections)
+  const data = await getPage('home')
+  if (!data) return null
+  console.log(data)
 
   return (
     <>
