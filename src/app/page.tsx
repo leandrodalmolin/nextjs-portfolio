@@ -2,6 +2,7 @@ import {
   About,
   Masthead,
   Navbar,
+  PageSectionGenerator,
   SideProjects,
   SkillSet,
   Work,
@@ -11,17 +12,16 @@ import { getPage } from '@/api'
 export default async function Home() {
   const data = await getPage('home')
   if (!data) return null
-  console.log(data)
+  const {
+    page: { masthead, sections },
+  } = data
 
   return (
     <>
       <Navbar />
       <main>
-        <Masthead />
-        <Work />
-        <SideProjects />
-        <SkillSet />
-        <About />
+        <Masthead heading={masthead.heading} subheading={masthead.subheading} />
+        <PageSectionGenerator sections={sections} />
       </main>
     </>
   )

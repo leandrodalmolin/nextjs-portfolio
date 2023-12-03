@@ -1,8 +1,17 @@
 import { FaEnvelope, FaFileAlt, FaGithub, FaLinkedin } from 'react-icons/fa'
-import { Heading, Link, Wrapper, FadeInScroll, Section } from '@/components'
+import {
+  Heading,
+  Link,
+  Wrapper,
+  FadeInScroll,
+  Section,
+  HTMLRenderer,
+} from '@/components'
 import styles from './About.module.scss'
+import { IAbout } from './About.types'
 
-export function About() {
+export function About({ content }: IAbout) {
+  if (!content) return null
   return (
     <Section id="about" fullHeight>
       <FadeInScroll>
@@ -11,22 +20,7 @@ export function About() {
       <Wrapper>
         <FadeInScroll>
           <div className={styles.copy}>
-            <p className={styles.intro}>
-              <strong>
-                My name is Leandro Dal Molin.
-                <br />A web developer mostly focused on the front-end.
-              </strong>
-            </p>
-            <p>
-              My interest in web development started back in 2000 building
-              websites on Microsoft FrontPage (I know) about my favourite bands.
-            </p>
-            <p>
-              Since then, I&apos;ve graduated, had the chance to work on a
-              variety of projects (software and web) and finally moved from
-              Brazil to England in 2017, where I&apos;ve been working as a web
-              developer building websites for businesses throughout the UK.
-            </p>
+            <HTMLRenderer html={content.html} />
           </div>
           <ul className={styles.links}>
             <li>

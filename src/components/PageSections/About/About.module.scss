@@ -4,6 +4,18 @@
 .copy {
   text-align: center;
 
+  strong {
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-sm;
+    color: $zinc-300;
+
+    @include media-query('sm', 'up') {
+      font-size: $font-size-xl;
+      line-height: $line-height-md;
+    }
+  }
+
   p {
     margin-bottom: $spacing-6;
   }
@@ -21,18 +33,6 @@
     p {
       font-size: $font-size-lg;
     }
-  }
-}
-
-.intro {
-  font-size: $font-size-lg;
-  font-weight: $font-weight-bold;
-  line-height: $line-height-sm;
-  color: $zinc-300;
-
-  @include media-query('sm', 'up') {
-    font-size: $font-size-xl;
-    line-height: $line-height-md;
   }
 }
 

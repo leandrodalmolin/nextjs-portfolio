@@ -1,6 +1,8 @@
 import { Heading, Link, Wrapper, FadeInScroll, Section } from '@/components'
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa'
 import styles from './SideProjects.module.scss'
+import { ISideProjects } from './SideProjects'
+import { TProjectLinkIcon } from '@/api'
 
 const DATA = [
   {
@@ -45,9 +47,11 @@ const DATA = [
   },
 ]
 
-export function SideProjects() {
-  const renderIcon = (icon: string) => {
-    if (icon === 'github') return <FaGithub size={12} />
+export function SideProjects({ projects }: ISideProjects) {
+  if (!projects) return null
+
+  const renderIcon = (icon: TProjectLinkIcon) => {
+    if (icon === 'Github') return <FaGithub size={12} />
     return <FaExternalLinkAlt size={12} />
   }
 
@@ -59,7 +63,7 @@ export function SideProjects() {
         </FadeInScroll>
         <FadeInScroll>
           <ul className={styles.grid}>
-            {DATA.map((item) => (
+            {projects.map((item) => (
               <li key={item.id} className={styles.item}>
                 <h4>{item.title}</h4>
                 <p>{item.description}</p>
@@ -67,8 +71,8 @@ export function SideProjects() {
                   {item.links.map((link) => (
                     <li key={link.id}>
                       <Link href={link.url} target="_blank">
-                        {renderIcon(link.icon)}
-                        {link.title}
+                        {link.icon && renderIcon(link.icon)}
+                        {link.text}
                       </Link>
                     </li>
                   ))}

@@ -1,9 +1,15 @@
-import { Heading, Wrapper, FadeInScroll, Section } from '@/components'
-import { FaReact, FaJsSquare, FaHtml5, FaCss3Alt, FaPhp } from 'react-icons/fa'
-import { SiNextdotjs } from 'react-icons/si'
+import {
+  Heading,
+  Wrapper,
+  FadeInScroll,
+  Section,
+  HTMLRenderer,
+} from '@/components'
 import styles from './SkillSet.module.scss'
+import { ISkillSet } from './SkillSet.types'
 
-export function SkillSet() {
+export function SkillSet({ skills }: ISkillSet) {
+  if (!skills) return null
   return (
     <Section id="tech" theme="light">
       <Wrapper size="lg">
@@ -16,24 +22,13 @@ export function SkillSet() {
         </FadeInScroll>
         <FadeInScroll>
           <ul className={styles.list}>
-            <li>
-              <SiNextdotjs title="Next.js" />
-            </li>
-            <li>
-              <FaReact title="React" />
-            </li>
-            <li>
-              <FaJsSquare title="JavaScript" />
-            </li>
-            <li>
-              <FaHtml5 title="HTML5" />
-            </li>
-            <li>
-              <FaCss3Alt title="CSS3" />
-            </li>
-            <li>
-              <FaPhp title="PHP" />
-            </li>
+            {skills.map((skill) => {
+              return (
+                <li key={skill.id}>
+                  <HTMLRenderer html={skill.iconSvg} title={skill.title} />
+                </li>
+              )
+            })}
           </ul>
         </FadeInScroll>
       </Wrapper>

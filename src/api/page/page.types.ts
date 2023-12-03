@@ -1,29 +1,31 @@
-type TAbout = {
+export type TAbout = {
   html: string
 }
 
-type TSkill = {
+export type TSkill = {
   id: string
   title: string
   iconSvg: string
 }
 
-type TProjectLink = {
+export type TProjectLinkIcon = 'Github' | 'External' | null
+
+export type TProjectLink = {
   id: string
   text: string
   url: string
   external: boolean
-  icon: 'Github' | 'External' | null
+  icon: TProjectLinkIcon
 }
 
-type TProject = {
+export type TProject = {
   id: string
   title: string
   description: string
   links: TProjectLink[]
 }
 
-type TWork = {
+export type TWork = {
   id: string
   title: string
   description: string
@@ -36,7 +38,7 @@ type TWork = {
   }
 }
 
-type TComponent = {
+export type TComponent = {
   id: string
   work?: TWork[]
   projects?: TProject[]
@@ -44,24 +46,24 @@ type TComponent = {
   about?: TAbout
 }
 
-type TMasthead = {
+export type TMasthead = {
   heading: string
   subheading: string
 }
 
-type THeadline = {
+export type THeadline = {
   heading: string
   subheading: string
 }
 
-type TSection = {
+export type TSection = {
   id: string
   anchor: string
   headline: THeadline
   component: TComponent
 }
 
-type TPageContent = {
+export type TPageContent = {
   slug: string
   masthead: TMasthead
   sections: TSection[]
