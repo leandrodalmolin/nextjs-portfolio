@@ -1,1 +1,1 @@
-export * from './HTMLRenderer'
+export * from './HtmlRenderer'
