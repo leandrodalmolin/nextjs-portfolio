@@ -1,5 +1,5 @@
 import cn from 'classnames'
-import { Card, Heading, Wrapper, FadeInScroll, Section } from '@/components'
+import { Card, Wrapper, FadeInScroll, Section } from '@/components'
 import styles from './Work.module.scss'
 import { IWork } from './Work.types'
 

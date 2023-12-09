@@ -1,6 +1,5 @@
 import { FaEnvelope, FaFileAlt, FaGithub, FaLinkedin } from 'react-icons/fa'
 import {
-  Heading,
   Link,
   Wrapper,
   FadeInScroll,

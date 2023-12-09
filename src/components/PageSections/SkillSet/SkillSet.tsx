@@ -1,10 +1,4 @@
-import {
-  Heading,
-  Wrapper,
-  FadeInScroll,
-  Section,
-  HTMLRenderer,
-} from '@/components'
+import { Wrapper, FadeInScroll, Section, HTMLRenderer } from '@/components'
 import styles from './SkillSet.module.scss'
 import { ISkillSet } from './SkillSet.types'
 

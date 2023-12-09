@@ -1,4 +1,4 @@
-import { Heading, Link, Wrapper, FadeInScroll, Section } from '@/components'
+import { Link, Wrapper, FadeInScroll, Section } from '@/components'
 import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa'
 import styles from './SideProjects.module.scss'
 import { ISideProjects } from './SideProjects.types'
