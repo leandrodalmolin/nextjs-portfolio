@@ -8,9 +8,13 @@ import {
 } from '@/components'
 import styles from './About.module.scss'
 import { IAbout } from './About.types'
+import { useGlobalsStore } from '@/store'
 
 export function About({ anchor, headline, content }: IAbout) {
   if (!content) return null
+
+  const { globals } = useGlobalsStore.getState()
+
   return (
     <Section id={anchor} headline={headline} fullHeight>
       <Wrapper>
@@ -20,28 +24,22 @@ export function About({ anchor, headline, content }: IAbout) {
           </div>
           <ul className={styles.links}>
             <li>
-              <Link href="/leandro-dal-molin-cv.pdf" target="_blank">
+              <Link href={globals?.cvFile?.url} target="_blank">
                 <FaFileAlt /> CV
               </Link>
             </li>
             <li>
-              <Link
-                href="https://www.linkedin.com/in/leandrodalmolin/"
-                target="_blank"
-              >
+              <Link href={globals?.linkedin} target="_blank">
                 <FaLinkedin /> LinkedIn
               </Link>
             </li>
             <li>
-              <Link
-                href="https://www.github.com/leandrodalmolin"
-                target="_blank"
-              >
+              <Link href={globals?.github} target="_blank">
                 <FaGithub /> GitHub
               </Link>
             </li>
             <li>
-              <Link href="mailto:leandro.swk@hotmail.com">
+              <Link href={`mailto:${globals?.email}`}>
                 <FaEnvelope /> Email
               </Link>
             </li>

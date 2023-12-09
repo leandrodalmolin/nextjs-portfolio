@@ -2,8 +2,11 @@ import { Link, Wrapper, FadeIn, Section } from '@/components'
 import styles from './Masthead.module.scss'
 import { NextSectionLink } from './NextSectionLink'
 import { IMasthead } from './Masthead.types'
+import { useGlobalsStore } from '@/store'
 
 export function Masthead({ heading, subheading }: IMasthead) {
+  const { globals } = useGlobalsStore.getState()
+
   return (
     <Section id="home" noPadding>
       <div className={styles.container}>
@@ -11,11 +14,7 @@ export function Masthead({ heading, subheading }: IMasthead) {
           <FadeIn delay={500}>
             <h1 className={styles.heading}>{heading}</h1>
             <p className={styles.subheading}>{subheading}</p>
-            <Link
-              variant="border"
-              href="/leandro-dal-molin-cv.pdf"
-              target="_blank"
-            >
+            <Link variant="border" href={globals?.cvFile?.url} target="_blank">
               Curriculum Vitae
             </Link>
           </FadeIn>
