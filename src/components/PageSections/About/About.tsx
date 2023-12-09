@@ -10,12 +10,12 @@ import {
 import styles from './About.module.scss'
 import { IAbout } from './About.types'
 
-export function About({ content }: IAbout) {
+export function About({ anchor, headline, content }: IAbout) {
   if (!content) return null
   return (
-    <Section id="about" fullHeight>
+    <Section id={anchor} fullHeight>
       <FadeInScroll>
-        <Heading heading="About Me" subheading="Who am I?" />
+        <Heading heading={headline.heading} subheading={headline.subheading} />
       </FadeInScroll>
       <Wrapper>
         <FadeInScroll>

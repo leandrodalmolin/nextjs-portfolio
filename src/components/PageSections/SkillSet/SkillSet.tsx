@@ -8,15 +8,15 @@ import {
 import styles from './SkillSet.module.scss'
 import { ISkillSet } from './SkillSet.types'
 
-export function SkillSet({ skills }: ISkillSet) {
+export function SkillSet({ anchor, headline, skills }: ISkillSet) {
   if (!skills) return null
   return (
-    <Section id="tech" theme="light">
+    <Section id={anchor} theme="light">
       <Wrapper size="lg">
         <FadeInScroll>
           <Heading
-            heading="Skill Set"
-            subheading="Technologies I Use"
+            heading={headline.heading}
+            subheading={headline.subheading}
             theme="light"
           />
         </FadeInScroll>

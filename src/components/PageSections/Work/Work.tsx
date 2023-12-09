@@ -3,15 +3,15 @@ import { Card, Heading, Wrapper, FadeInScroll, Section } from '@/components'
 import styles from './Work.module.scss'
 import { IWork } from './Work.types'
 
-export function Work({ works }: IWork) {
+export function Work({ anchor, headline, works }: IWork) {
   if (!works) return null
   return (
-    <Section id="work" theme="light">
+    <Section id={anchor} theme="light">
       <Wrapper size="xxl">
         <FadeInScroll>
           <Heading
-            heading="Selected Work"
-            subheading="© Artworking/Golfworking"
+            heading={headline.heading}
+            subheading={headline.subheading}
             theme="light"
           />
         </FadeInScroll>
