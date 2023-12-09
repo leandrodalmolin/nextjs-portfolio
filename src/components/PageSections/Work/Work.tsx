@@ -6,15 +6,8 @@ import { IWork } from './Work.types'
 export function Work({ anchor, headline, works }: IWork) {
   if (!works) return null
   return (
-    <Section id={anchor} theme="light">
+    <Section id={anchor} headline={headline} theme="light">
       <Wrapper size="xxl">
-        <FadeInScroll>
-          <Heading
-            heading={headline.heading}
-            subheading={headline.subheading}
-            theme="light"
-          />
-        </FadeInScroll>
         <div className={styles.grid}>
           {works.map((work, index) => {
             const lastItem = works.length - 1 === index

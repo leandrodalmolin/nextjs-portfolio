@@ -13,10 +13,7 @@ import { IAbout } from './About.types'
 export function About({ anchor, headline, content }: IAbout) {
   if (!content) return null
   return (
-    <Section id={anchor} fullHeight>
-      <FadeInScroll>
-        <Heading heading={headline.heading} subheading={headline.subheading} />
-      </FadeInScroll>
+    <Section id={anchor} headline={headline} fullHeight>
       <Wrapper>
         <FadeInScroll>
           <div className={styles.copy}>

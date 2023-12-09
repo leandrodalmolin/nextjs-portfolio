@@ -13,14 +13,8 @@ export function SideProjects({ anchor, headline, projects }: ISideProjects) {
   }
 
   return (
-    <Section id={anchor}>
+    <Section id={anchor} headline={headline}>
       <Wrapper size="lg">
-        <FadeInScroll>
-          <Heading
-            heading={headline.heading}
-            subheading={headline.subheading}
-          />
-        </FadeInScroll>
         <FadeInScroll>
           <ul className={styles.grid}>
             {projects.map((item) => (

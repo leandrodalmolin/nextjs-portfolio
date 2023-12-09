@@ -11,15 +11,8 @@ import { ISkillSet } from './SkillSet.types'
 export function SkillSet({ anchor, headline, skills }: ISkillSet) {
   if (!skills) return null
   return (
-    <Section id={anchor} theme="light">
+    <Section id={anchor} headline={headline} theme="light">
       <Wrapper size="lg">
-        <FadeInScroll>
-          <Heading
-            heading={headline.heading}
-            subheading={headline.subheading}
-            theme="light"
-          />
-        </FadeInScroll>
         <FadeInScroll>
           <ul className={styles.list}>
             {skills.map((skill) => {
