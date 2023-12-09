@@ -1,12 +1,4 @@
-import {
-  About,
-  Masthead,
-  Navbar,
-  PageSectionGenerator,
-  SideProjects,
-  SkillSet,
-  Work,
-} from '@/components'
+import { Navbar, Masthead, PageSectionGenerator } from '@/components'
 import { getPage } from '@/api'
 
 export default async function Home() {
