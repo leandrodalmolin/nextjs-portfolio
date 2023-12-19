@@ -1,23 +1,19 @@
-import { getPage } from '@/api'
-import { Navbar, Masthead, PageSectionGenerator } from '@/components'
 import { useStore } from '@/store'
+import { Navbar, Masthead, PageSectionGenerator } from '@/components'
 
 export default async function Home() {
-  const state = useStore.getState()
-  state.fetchGlobals()
+  const { page, fetchGlobals, fetchPage } = useStore.getState()
+  fetchGlobals()
+  fetchPage()
 
-  const data = await getPage('home')
-  if (!data) return null
-  const {
-    page: { masthead, sections },
-  } = data
+  if (!page) return null
 
   return (
     <>
       <Navbar />
       <main>
-        <Masthead heading={masthead.heading} subheading={masthead.subheading} />
-        <PageSectionGenerator sections={sections} />
+        <Masthead {...page.masthead} />
+        <PageSectionGenerator sections={page.sections} />
       </main>
     </>
   )
