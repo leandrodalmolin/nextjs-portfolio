@@ -1,10 +1,10 @@
 import { getPage } from '@/api'
 import { Navbar, Masthead, PageSectionGenerator } from '@/components'
-import { useGlobalsStore } from '@/store'
+import { useStore } from '@/store'
 
 export default async function Home() {
-  const globalsState = useGlobalsStore.getState()
-  globalsState.fetch()
+  const state = useStore.getState()
+  state.fetchGlobals()
 
   const data = await getPage('home')
   if (!data) return null

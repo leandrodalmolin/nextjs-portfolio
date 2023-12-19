@@ -1,15 +1,8 @@
 import { create } from 'zustand'
-import { TGlobals, getGlobals } from '@/api'
+import { IGlobalsSlice, createGlobalsSlice } from './slices'
 
-interface GlobalsState {
-  globals?: TGlobals
-  fetch: () => void
-}
+interface IStoreState extends IGlobalsSlice {}
 
-export const useGlobalsStore = create<GlobalsState>((set) => ({
-  globals: undefined,
-  fetch: async () => {
-    const data = await getGlobals()
-    set({ globals: data?.globals[0] })
-  },
+export const useStore = create<IStoreState>((...args) => ({
+  ...createGlobalsSlice(...args)
 }))

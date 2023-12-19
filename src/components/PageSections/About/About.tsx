@@ -8,12 +8,12 @@ import {
 } from '@/components'
 import styles from './About.module.scss'
 import { IAbout } from './About.types'
-import { useGlobalsStore } from '@/store'
+import { useStore } from '@/store'
 
 export function About({ anchor, headline, content }: IAbout) {
   if (!content) return null
 
-  const { globals } = useGlobalsStore.getState()
+  const { globals } = useStore.getState()
 
   return (
     <Section id={anchor} headline={headline} fullHeight>
