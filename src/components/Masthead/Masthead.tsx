@@ -2,10 +2,10 @@ import { Link, Wrapper, FadeIn, Section } from '@/components'
 import styles from './Masthead.module.scss'
 import { NextSectionLink } from './NextSectionLink'
 import { IMasthead } from './Masthead.types'
-import { useStore } from '@/store'
+import { useBoundStore } from '@/store'
 
 export function Masthead({ heading, subheading }: IMasthead) {
-  const { globals } = useStore.getState()
+  const { globals } = useBoundStore.getState()
 
   return (
     <Section id="home" noPadding>

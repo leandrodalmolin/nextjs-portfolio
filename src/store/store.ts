@@ -6,9 +6,9 @@ import {
   createPageSlice,
 } from './slices'
 
-interface IStoreState extends IGlobalsSlice, IPageSlice {}
+interface IBoundStoreState extends IGlobalsSlice, IPageSlice {}
 
-export const useStore = create<IStoreState>((...args) => ({
+export const useBoundStore = create<IBoundStoreState>((...args) => ({
   ...createGlobalsSlice(...args),
   ...createPageSlice(...args),
 }))

@@ -8,12 +8,12 @@ import {
 } from '@/components'
 import styles from './About.module.scss'
 import { IAbout } from './About.types'
-import { useStore } from '@/store'
+import { useBoundStore } from '@/store'
 
 export function About({ anchor, headline, content }: IAbout) {
   if (!content) return null
 
-  const { globals } = useStore.getState()
+  const { globals } = useBoundStore.getState()
 
   return (
     <Section id={anchor} headline={headline} fullHeight>
