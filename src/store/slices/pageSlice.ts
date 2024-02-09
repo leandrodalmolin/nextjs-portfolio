@@ -3,7 +3,7 @@ import { TPageContent, getPage } from '@/api'
 
 export interface IPageSlice {
   page?: TPageContent
-  fetchPage: () => void
+  fetchPage: () => Promise<void>
 }
 
 export const createPageSlice: StateCreator<IPageSlice> = (set) => ({

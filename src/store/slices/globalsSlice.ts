@@ -3,7 +3,7 @@ import { TGlobals, getGlobals } from '@/api'
 
 export interface IGlobalsSlice {
   globals?: TGlobals
-  fetchGlobals: () => void
+  fetchGlobals: () => Promise<void>
 }
 
 export const createGlobalsSlice: StateCreator<IGlobalsSlice> = (set) => ({

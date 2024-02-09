@@ -12,3 +12,9 @@ export const useBoundStore = create<IBoundStoreState>((...args) => ({
   ...createGlobalsSlice(...args),
   ...createPageSlice(...args),
 }))
+
+export const loadStore = async () => {
+  const { fetchGlobals, fetchPage } = useBoundStore.getState()
+  await fetchGlobals()
+  await fetchPage()
+}
