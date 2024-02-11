@@ -1,7 +1,7 @@
 import { TAbout, THeadline } from '@/api'
 
 export interface IAbout {
-  anchor: string
+  target: string
   headline: THeadline
   content?: TAbout
 }

@@ -10,13 +10,13 @@ import styles from './About.module.scss'
 import { IAbout } from './About.types'
 import { getGlobals } from '@/api'
 
-export async function About({ anchor, headline, content }: IAbout) {
+export async function About({ target, headline, content }: IAbout) {
   if (!content) return null
 
   const globals = await getGlobals()
 
   return (
-    <Section id={anchor} headline={headline} fullHeight>
+    <Section id={target} headline={headline} fullHeight>
       <Wrapper>
         <FadeInScroll>
           <div className={styles.copy}>

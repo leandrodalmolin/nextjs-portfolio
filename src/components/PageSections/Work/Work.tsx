@@ -3,10 +3,10 @@ import { Card, Wrapper, FadeInScroll, Section } from '@/components'
 import styles from './Work.module.scss'
 import { IWork } from './Work.types'
 
-export function Work({ anchor, headline, works }: IWork) {
+export function Work({ target, headline, works }: IWork) {
   if (!works) return null
   return (
-    <Section id={anchor} headline={headline} theme="light">
+    <Section id={target} headline={headline} theme="light">
       <Wrapper size="xxl">
         <div className={styles.grid}>
           {works.map((work, index) => {

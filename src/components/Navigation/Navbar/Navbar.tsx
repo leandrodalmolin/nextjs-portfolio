@@ -1,13 +1,14 @@
 'use client'
 
+import cn from 'classnames'
 import { useState } from 'react'
 import { Squash as Hamburger } from 'hamburger-react'
-import cn from 'classnames'
 import { LinkScroll, Logo, Menu, Sidebar, Wrapper, FadeIn } from '@/components'
-import styles from './Navbar.module.scss'
 import { useScrollStatus } from '@/hooks'
+import styles from './Navbar.module.scss'
+import { INavbar } from './Navbar.types'
 
-export function Navbar() {
+export function Navbar({ menuItems }: INavbar) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
   const { isScrolling } = useScrollStatus()
 
@@ -48,7 +49,7 @@ export function Navbar() {
 
             <div className={styles.menu}>
               <FadeIn delay={1500}>
-                <Menu />
+                <Menu items={menuItems} />
               </FadeIn>
             </div>
           </nav>
@@ -56,7 +57,7 @@ export function Navbar() {
       </header>
 
       <Sidebar isOpen={isSidebarOpen}>
-        <Menu onLinkClick={handleCloseSidebar} />
+        <Menu items={menuItems} onLinkClick={handleCloseSidebar} />
       </Sidebar>
     </>
   )

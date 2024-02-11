@@ -1,7 +1,7 @@
 import { THeadline, TWork } from '@/api'
 
 export interface IWork {
-  anchor: string
+  target: string
   headline: THeadline
   works?: TWork[]
 }

@@ -58,7 +58,8 @@ export type THeadline = {
 
 export type TSection = {
   id: string
-  anchor: string
+  menuText: string
+  menuTarget: string
   headline: THeadline
   component: TComponent
 }

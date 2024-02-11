@@ -3,7 +3,7 @@ import { IPageSectionGenerator } from './PageSectionGenerator.types'
 
 export function PageSectionGenerator({ sections }: IPageSectionGenerator) {
   return sections.map((section) => {
-    const { id, anchor, headline, component } = section
+    const { id, menuTarget, headline, component } = section
 
     const componentParts = Object.keys(component)
     const componentName = componentParts[1]
@@ -13,7 +13,7 @@ export function PageSectionGenerator({ sections }: IPageSectionGenerator) {
         return (
           <Work
             key={id}
-            anchor={anchor}
+            target={menuTarget}
             headline={headline}
             works={component.work}
           />
@@ -22,7 +22,7 @@ export function PageSectionGenerator({ sections }: IPageSectionGenerator) {
         return (
           <SideProjects
             key={id}
-            anchor={anchor}
+            target={menuTarget}
             headline={headline}
             projects={component.projects}
           />
@@ -31,7 +31,7 @@ export function PageSectionGenerator({ sections }: IPageSectionGenerator) {
         return (
           <SkillSet
             key={id}
-            anchor={anchor}
+            target={menuTarget}
             headline={headline}
             skills={component.skills}
           />
@@ -40,7 +40,7 @@ export function PageSectionGenerator({ sections }: IPageSectionGenerator) {
         return (
           <About
             key={id}
-            anchor={anchor}
+            target={menuTarget}
             headline={headline}
             content={component.about}
           />

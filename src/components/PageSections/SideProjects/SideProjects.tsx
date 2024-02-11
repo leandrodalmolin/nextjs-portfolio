@@ -4,7 +4,7 @@ import styles from './SideProjects.module.scss'
 import { ISideProjects } from './SideProjects.types'
 import { TProjectLinkIcon } from '@/api'
 
-export function SideProjects({ anchor, headline, projects }: ISideProjects) {
+export function SideProjects({ target, headline, projects }: ISideProjects) {
   if (!projects) return null
 
   const renderIcon = (icon: TProjectLinkIcon) => {
@@ -13,7 +13,7 @@ export function SideProjects({ anchor, headline, projects }: ISideProjects) {
   }
 
   return (
-    <Section id={anchor} headline={headline}>
+    <Section id={target} headline={headline}>
       <Wrapper size="lg">
         <FadeInScroll>
           <ul className={styles.grid}>

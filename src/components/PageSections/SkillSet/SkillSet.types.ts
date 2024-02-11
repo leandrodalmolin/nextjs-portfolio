@@ -1,7 +1,7 @@
 import { THeadline, TSkill } from '@/api'
 
 export interface ISkillSet {
-  anchor: string
+  target: string
   headline: THeadline
   skills?: TSkill[]
 }

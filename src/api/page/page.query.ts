@@ -9,7 +9,8 @@ export const query = `
       sections {
         ... on Section {
           id
-          anchor
+          menuText
+          menuTarget
           headline {
             heading
             subheading

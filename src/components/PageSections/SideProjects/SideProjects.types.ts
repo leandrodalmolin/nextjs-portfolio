@@ -1,7 +1,7 @@
 import { THeadline, TProject } from '@/api'
 
 export interface ISideProjects {
-  anchor: string
+  target: string
   headline: THeadline
   projects?: TProject[]
 }
