@@ -1,5 +1,5 @@
-import { TMenuItems } from '..'
+import { TMenuItem } from '@/components/Navigation/Menu'
 
 export interface INavbar {
-  menuItems: TMenuItems[]
+  menuItems: TMenuItem[]
 }
