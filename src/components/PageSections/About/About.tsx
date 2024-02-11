@@ -1,57 +1,45 @@
 import { FaEnvelope, FaFileAlt, FaGithub, FaLinkedin } from 'react-icons/fa'
-import { Heading, Link, Wrapper, FadeInScroll, Section } from '@/components'
+import {
+  Link,
+  Wrapper,
+  FadeInScroll,
+  Section,
+  HTMLRenderer,
+} from '@/components'
+import { getGlobals } from '@/api'
 import styles from './About.module.scss'
+import { IAbout } from './About.types'
 
-export function About() {
+export async function About({ target, headline, content }: IAbout) {
+  if (!content) return null
+
+  const globals = await getGlobals()
+
   return (
-    <Section id="about" fullHeight>
-      <FadeInScroll>
-        <Heading heading="About Me" subheading="Who am I?" />
-      </FadeInScroll>
+    <Section id={target} headline={headline} fullHeight>
       <Wrapper>
         <FadeInScroll>
           <div className={styles.copy}>
-            <p className={styles.intro}>
-              <strong>
-                My name is Leandro Dal Molin.
-                <br />A web developer mostly focused on the front-end.
-              </strong>
-            </p>
-            <p>
-              My interest in web development started back in 2000 building
-              websites on Microsoft FrontPage (I know) about my favourite bands.
-            </p>
-            <p>
-              Since then, I&apos;ve graduated, had the chance to work on a
-              variety of projects (software and web) and finally moved from
-              Brazil to England in 2017, where I&apos;ve been working as a web
-              developer building websites for businesses throughout the UK.
-            </p>
+            <HTMLRenderer html={content.html} />
           </div>
           <ul className={styles.links}>
             <li>
-              <Link href="/leandro-dal-molin-cv.pdf" target="_blank">
+              <Link href="/cv" target="_blank">
                 <FaFileAlt /> CV
               </Link>
             </li>
             <li>
-              <Link
-                href="https://www.linkedin.com/in/leandrodalmolin/"
-                target="_blank"
-              >
+              <Link href={globals?.linkedin} target="_blank">
                 <FaLinkedin /> LinkedIn
               </Link>
             </li>
             <li>
-              <Link
-                href="https://www.github.com/leandrodalmolin"
-                target="_blank"
-              >
+              <Link href={globals?.github} target="_blank">
                 <FaGithub /> GitHub
               </Link>
             </li>
             <li>
-              <Link href="mailto:leandro.swk@hotmail.com">
+              <Link href={`mailto:${globals?.email}`}>
                 <FaEnvelope /> Email
               </Link>
             </li>
