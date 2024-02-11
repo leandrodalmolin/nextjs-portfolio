@@ -4,7 +4,8 @@ import { IPageData } from './page.types'
 
 export async function getPage(slug: string) {
   try {
-    return await hygraph.request<IPageData>(query, { slug })
+    const data = await hygraph.request<IPageData>(query, { slug })
+    return data?.page
   } catch (error) {
     console.error(error)
   }

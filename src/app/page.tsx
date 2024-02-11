@@ -1,9 +1,8 @@
-import { loadStore, useBoundStore } from '@/store'
 import { Navbar, Masthead, PageSectionGenerator } from '@/components'
+import { getPage } from '@/api'
 
 export default async function Home() {
-  await loadStore()
-  const { page } = useBoundStore.getState()
+  const page = await getPage('home')
 
   if (!page) return null
 

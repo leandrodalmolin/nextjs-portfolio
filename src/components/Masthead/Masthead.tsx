@@ -1,11 +1,11 @@
+import { getGlobals } from '@/api'
 import { Link, Wrapper, FadeIn, Section } from '@/components'
 import styles from './Masthead.module.scss'
 import { NextSectionLink } from './NextSectionLink'
 import { IMasthead } from './Masthead.types'
-import { useBoundStore } from '@/store'
 
-export function Masthead({ heading, subheading }: IMasthead) {
-  const { globals } = useBoundStore.getState()
+export async function Masthead({ heading, subheading }: IMasthead) {
+  const globals = await getGlobals()
 
   return (
     <Section id="home" noPadding>
