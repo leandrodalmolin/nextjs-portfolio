@@ -1,3 +1,6 @@
+import { ReactNode } from 'react'
+
 export interface ISidebar {
-  onCloseSidebar?: () => void
+  isOpen: boolean
+  children: ReactNode
 }

@@ -1,40 +1,19 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
-import { CSSTransition } from 'react-transition-group'
+import { useState } from 'react'
 import { Squash as Hamburger } from 'hamburger-react'
 import cn from 'classnames'
 import { LinkScroll, Logo, Menu, Sidebar, Wrapper, FadeIn } from '@/components'
 import styles from './Navbar.module.scss'
+import { useScrollStatus } from '@/hooks'
 
 export function Navbar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
-  const [isScrolling, setIsScrolling] = useState(false)
-  const sidebarRef = useRef(null)
+  const { isScrolling } = useScrollStatus()
 
   const handleCloseSidebar = () => {
     setIsSidebarOpen(false)
   }
-
-  const lockScroll = () => {
-    const body = document.querySelector('body')
-    body?.classList.add('overflow-hidden')
-  }
-
-  const unlockScroll = () => {
-    const body = document.querySelector('body')
-    body?.classList.remove('overflow-hidden')
-  }
-
-  const handleScroll = () => {
-    const threshold = 300
-    setIsScrolling(window.scrollY > threshold)
-  }
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  })
 
   const classes = cn(styles.navbar, {
     [styles.open]: isSidebarOpen,
@@ -76,17 +55,9 @@ export function Navbar() {
         </Wrapper>
       </header>
 
-      <CSSTransition
-        in={isSidebarOpen}
-        timeout={400}
-        classNames="sidebar"
-        unmountOnExit
-        onEntered={lockScroll}
-        onExited={unlockScroll}
-        nodeRef={sidebarRef}
-      >
-        <Sidebar ref={sidebarRef} onCloseSidebar={handleCloseSidebar} />
-      </CSSTransition>
+      <Sidebar isOpen={isSidebarOpen}>
+        <Menu onLinkClick={handleCloseSidebar} />
+      </Sidebar>
     </>
   )
 }
