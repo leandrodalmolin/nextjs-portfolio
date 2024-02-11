@@ -1,4 +1,3 @@
-import { getGlobals } from '@/api'
 import { Link, Wrapper, FadeIn, Section } from '@/components'
 import styles from './Masthead.module.scss'
 import { IMasthead } from './Masthead.types'

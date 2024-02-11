@@ -6,9 +6,9 @@ import {
   Section,
   HTMLRenderer,
 } from '@/components'
+import { getGlobals } from '@/api'
 import styles from './About.module.scss'
 import { IAbout } from './About.types'
-import { getGlobals } from '@/api'
 
 export async function About({ target, headline, content }: IAbout) {
   if (!content) return null
