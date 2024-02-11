@@ -1,10 +1,9 @@
 import { getGlobals } from '@/api'
 import { Link, Wrapper, FadeIn, Section } from '@/components'
 import styles from './Masthead.module.scss'
-import { NextSectionLink } from './NextSectionLink'
 import { IMasthead } from './Masthead.types'
 
-export async function Masthead({ heading, subheading }: IMasthead) {
+export async function Masthead({ heading, subheading, children }: IMasthead) {
   const globals = await getGlobals()
 
   return (
@@ -19,7 +18,7 @@ export async function Masthead({ heading, subheading }: IMasthead) {
             </Link>
           </FadeIn>
         </Wrapper>
-        <NextSectionLink />
+        {children}
       </div>
     </Section>
   )

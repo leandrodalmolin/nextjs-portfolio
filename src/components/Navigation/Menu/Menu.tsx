@@ -2,8 +2,6 @@ import { LinkScroll } from '@/components'
 import { IMenu } from './Menu.types'
 
 export function Menu({ items, onLinkClick, ...rest }: IMenu) {
-  console.log(items)
-
   return (
     <ul {...rest}>
       {items.map((item) => {
