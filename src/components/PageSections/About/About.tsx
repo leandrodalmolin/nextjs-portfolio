@@ -24,7 +24,7 @@ export async function About({ target, headline, content }: IAbout) {
           </div>
           <ul className={styles.links}>
             <li>
-              <Link href={globals?.cvFile?.url} target="_blank">
+              <Link href="/cv" target="_blank">
                 <FaFileAlt /> CV
               </Link>
             </li>
