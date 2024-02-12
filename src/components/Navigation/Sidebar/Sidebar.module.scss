@@ -27,3 +27,21 @@
     display: none;
   }
 }
+
+.transitionEnter {
+  opacity: 0;
+}
+
+.transitionEnterActive {
+  opacity: 1;
+  transition: opacity 0.3s ease-in;
+}
+
+.transitionExit {
+  opacity: 1;
+}
+
+.transitionExitActive {
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}

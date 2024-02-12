@@ -1,9 +1,9 @@
 'use client'
 
-import React, { useRef } from 'react'
+import { useRef } from 'react'
+import { CSSTransition } from 'react-transition-group'
 import { ISidebar } from './Sidebar.types'
 import styles from './Sidebar.module.scss'
-import { CSSTransition } from 'react-transition-group'
 
 export const Sidebar = ({ isOpen = false, children }: ISidebar) => {
   const ref = useRef(null)
@@ -22,14 +22,20 @@ export const Sidebar = ({ isOpen = false, children }: ISidebar) => {
     <CSSTransition
       in={isOpen}
       timeout={400}
-      unmountOnExit
+      nodeRef={ref}
       onEntered={lockScroll}
       onExited={unlockScroll}
-      nodeRef={ref}
+      unmountOnExit
+      classNames={{
+        enter: styles.transitionEnter,
+        enterActive: styles.transitionEnterActive,
+        exit: styles.transitionExit,
+        exitActive: styles.transitionExitActive,
+      }}
     >
-      <div ref={ref} className={styles.sidebar}>
+      <nav ref={ref} className={styles.sidebar}>
         {children}
-      </div>
+      </nav>
     </CSSTransition>
   )
 }

@@ -14,6 +14,7 @@
     "graphql-request": "^6.1.0",
     "hamburger-react": "^2.5.0",
     "isomorphic-dompurify": "^1.11.0",
+    "lodash.debounce": "^4.0.8",
     "next": "14.0.2",
     "react": "^18",
     "react-dom": "^18",
@@ -22,6 +23,7 @@
     "react-transition-group": "^4.4.5"
   },
   "devDependencies": {
+    "@types/lodash.debounce": "^4.0.9",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

@@ -4,7 +4,7 @@ import cn from 'classnames'
 import { useState } from 'react'
 import { Squash as Hamburger } from 'hamburger-react'
 import { LinkScroll, Logo, Menu, Sidebar, Wrapper, FadeIn } from '@/components'
-import { useScrollStatus } from '@/hooks'
+import { useScrollStatus, useWindowResize } from '@/hooks'
 import styles from './Navbar.module.scss'
 import { INavbar } from './Navbar.types'
 
@@ -15,6 +15,11 @@ export function Navbar({ menuItems }: INavbar) {
   const handleCloseSidebar = () => {
     setIsSidebarOpen(false)
   }
+
+  // Close sidebar on screen resize in case sidebar is open
+  useWindowResize(() => handleCloseSidebar(), {
+    minWidth: 768,
+  })
 
   const classes = cn(styles.navbar, {
     [styles.open]: isSidebarOpen,
