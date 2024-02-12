@@ -5,6 +5,8 @@
   position: fixed;
   top: 0;
   width: 100%;
+  opacity: 0;
+  animation: delayedFadeIn 2.3s ease-in forwards;
   transition: all 0.7s;
   z-index: 20;
 
@@ -72,5 +74,14 @@
 
   @include media-query('md', 'up') {
     display: block;
+  }
+}
+
+@keyframes delayedFadeIn {
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
