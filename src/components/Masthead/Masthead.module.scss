@@ -2,6 +2,7 @@
 @import '@/styles/_mixins.scss';
 
 .container {
+  @include fade-in(0.3s);
   position: relative;
   display: flex;
   justify-content: center;

@@ -18,3 +18,17 @@
     }
   }
 }
+
+@mixin fade-in($delay: 0s, $duration: 1.2s) {
+  opacity: 0;
+  animation: fadeIn $duration ease-in $delay forwards;
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}

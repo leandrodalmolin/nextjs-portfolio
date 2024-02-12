@@ -2,11 +2,10 @@
 @import '@/styles/_mixins.scss';
 
 .navbar {
+  @include fade-in(0.8s);
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 0;
-  animation: delayedFadeIn 2.3s ease-in forwards;
   transition: all 0.7s;
   z-index: 20;
 
@@ -39,6 +38,7 @@
 }
 
 .nav {
+  @include fade-in(0.3s);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -57,6 +57,7 @@
 }
 
 .hamburger {
+  @include fade-in(0.6s);
   margin-right: -$spacing-3;
 
   @include media-query('md', 'up') {
@@ -65,6 +66,7 @@
 }
 
 .menu {
+  @include fade-in(0.6s);
   display: none;
 
   ul {
@@ -74,14 +76,5 @@
 
   @include media-query('md', 'up') {
     display: block;
-  }
-}
-
-@keyframes delayedFadeIn {
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
   }
 }

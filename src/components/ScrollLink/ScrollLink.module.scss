@@ -1,6 +1,8 @@
 @import '@/styles/_variables.scss';
+@import '@/styles/_mixins.scss';
 
 .container {
+  @include fade-in(1.5s);
   position: absolute;
   bottom: 0;
   left: 0;

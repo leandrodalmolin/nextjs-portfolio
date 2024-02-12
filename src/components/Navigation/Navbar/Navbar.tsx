@@ -3,7 +3,7 @@
 import cn from 'classnames'
 import { useState } from 'react'
 import { Squash as Hamburger } from 'hamburger-react'
-import { LinkScroll, Logo, Menu, Sidebar, Wrapper, FadeIn } from '@/components'
+import { LinkScroll, Logo, Menu, Sidebar, Wrapper } from '@/components'
 import { useScrollStatus, useWindowResize } from '@/hooks'
 import styles from './Navbar.module.scss'
 import { INavbar } from './Navbar.types'
@@ -32,30 +32,24 @@ export function Navbar({ menuItems }: INavbar) {
       <header className={classes}>
         <Wrapper size="xxl">
           <nav className={styles.nav}>
-            <FadeIn delay={1000}>
-              <LinkScroll to="home" href="#home" onClick={handleCloseSidebar}>
-                <div className={styles.logo}>
-                  <Logo />
-                </div>
-              </LinkScroll>
-            </FadeIn>
+            <LinkScroll to="home" href="#home" onClick={handleCloseSidebar}>
+              <div className={styles.logo}>
+                <Logo />
+              </div>
+            </LinkScroll>
 
             <div className={styles.hamburger}>
-              <FadeIn delay={1500}>
-                <Hamburger
-                  color="#d4d4d8"
-                  size={28}
-                  distance="sm"
-                  toggled={isSidebarOpen}
-                  toggle={setIsSidebarOpen}
-                />
-              </FadeIn>
+              <Hamburger
+                color="#d4d4d8"
+                size={28}
+                distance="sm"
+                toggled={isSidebarOpen}
+                toggle={setIsSidebarOpen}
+              />
             </div>
 
             <div className={styles.menu}>
-              <FadeIn delay={1500}>
-                <Menu items={menuItems} />
-              </FadeIn>
+              <Menu items={menuItems} />
             </div>
           </nav>
         </Wrapper>

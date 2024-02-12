@@ -1,5 +1,4 @@
 export * from './Card'
-export * from './FadeIn'
 export * from './FadeInScroll'
 export * from './GoogleAnalytics'
 export * from './Heading'
