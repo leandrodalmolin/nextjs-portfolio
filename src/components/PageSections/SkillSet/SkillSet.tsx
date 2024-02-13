@@ -17,12 +17,9 @@ export function SkillSet({ target, headline, skills }: ISkillSet) {
           <ul className={styles.list}>
             {skills.map((skill) => {
               return (
-                <li key={skill.id}>
-                  <HTMLRenderer
-                    html={skill.iconSvg}
-                    title={skill.title}
-                    tabIndex={0}
-                  />
+                <li key={skill.id} tabIndex={0} aria-label={skill.title}>
+                  <HTMLRenderer html={skill.iconSvg} />
+                  <p>{skill.title}</p>
                 </li>
               )
             })}
