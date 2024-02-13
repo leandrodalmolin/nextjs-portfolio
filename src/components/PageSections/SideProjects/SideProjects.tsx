@@ -13,13 +13,18 @@ export function SideProjects({ target, headline, projects }: ISideProjects) {
   }
 
   return (
-    <Section id={target} headline={headline}>
+    <Section
+      id={target}
+      headline={headline}
+      tabIndex={0}
+      aria-label="Side projects section"
+    >
       <Wrapper size="lg">
         <FadeInScroll>
           <ul className={styles.grid}>
             {projects.map((item) => (
               <li key={item.id} className={styles.item}>
-                <h4>{item.title}</h4>
+                <h3>{item.title}</h3>
                 <p>{item.description}</p>
                 <ul>
                   {item.links.map((link) => (

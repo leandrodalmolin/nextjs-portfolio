@@ -4,19 +4,29 @@
 .list {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: $spacing-7;
+  gap: $spacing-7 $spacing-5;
   margin-top: $spacing-10;
   color: $zinc-600;
 
+  :focus-visible {
+    box-shadow: 0 0 0 1px $zinc-900;
+  }
+
+  li {
+    &:hover,
+    &:focus-within {
+      svg {
+        color: $zinc-900;
+      }
+    }
+  }
+
   svg {
+    display: block;
     width: $spacing-11;
     height: $spacing-10;
     margin: auto;
     transition: color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-
-    &:hover {
-      color: $zinc-900;
-    }
   }
 
   @include media-query('sm', 'up') {
@@ -24,7 +34,6 @@
   }
 
   @include media-query('md', 'up') {
-    gap: $spacing-10;
     margin-top: $spacing-11;
 
     svg {

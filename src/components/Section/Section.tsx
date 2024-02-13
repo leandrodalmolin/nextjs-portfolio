@@ -10,13 +10,14 @@ export function Section({
   noPadding = false,
   fullHeight = false,
   children,
+  ...rest
 }: ISection) {
   const classes = cn(styles.section, styles[theme], {
     [styles['no-padding']]: noPadding,
     [styles['full-height']]: fullHeight,
   })
   return (
-    <section id={id} className={classes}>
+    <section id={id} className={classes} {...rest}>
       <div>
         {headline && (
           <Heading

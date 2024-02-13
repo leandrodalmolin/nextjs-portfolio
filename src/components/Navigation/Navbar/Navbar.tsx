@@ -45,6 +45,7 @@ export function Navbar({ menuItems }: INavbar) {
                 distance="sm"
                 toggled={isSidebarOpen}
                 toggle={setIsSidebarOpen}
+                label="Show menu"
               />
             </div>
 

@@ -1,5 +1,5 @@
 import cn from 'classnames'
-import { Card, Wrapper, FadeInScroll, Section } from '@/components'
+import { Card, Wrapper, Section } from '@/components'
 import styles from './Work.module.scss'
 import { IWork } from './Work.types'
 
@@ -17,15 +17,13 @@ export function Work({ target, headline, works }: IWork) {
             return (
               <div key={work.id} className={itemClasses}>
                 <div className={styles['item-container']}>
-                  <FadeInScroll>
-                    <Card
-                      title={work.title}
-                      description={work.description}
-                      url={work.siteUrl}
-                      imageSrc={work.image.url}
-                      bgColor={work.cardColour.hex}
-                    />
-                  </FadeInScroll>
+                  <Card
+                    title={work.title}
+                    description={work.description}
+                    url={work.siteUrl}
+                    imageSrc={work.image.url}
+                    bgColor={work.cardColour.hex}
+                  />
                 </div>
               </div>
             )

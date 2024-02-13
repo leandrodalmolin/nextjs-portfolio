@@ -1,15 +1,10 @@
 @import '@/styles/_mixins.scss';
 @import '@/styles/_variables.scss';
 
-.card {
-  border-radius: $radius-md;
-  padding: 10% 10% 0;
-  background-color: $zinc-800;
-
+.container {
   @include media-query('md', 'up') {
-    margin-top: 8%;
-
-    &:hover {
+    &:hover,
+    &:focus-within {
       .copy {
         max-height: 50rem;
         opacity: 1;
@@ -20,6 +15,16 @@
         margin-top: $spacing-8;
       }
     }
+  }
+}
+
+.card {
+  border-radius: $radius-md;
+  padding: 10% 10% 0;
+  background-color: $zinc-800;
+
+  @include media-query('md', 'up') {
+    margin-top: 8%;
   }
 }
 

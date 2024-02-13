@@ -8,7 +8,6 @@
 - [Covered concepts](#covered-concepts)
 - [Requirements](#requirements)
 - [Getting started](#getting-started)
-- [To do](#to-do)
 
 ## The project
 

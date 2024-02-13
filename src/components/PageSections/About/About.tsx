@@ -16,7 +16,13 @@ export async function About({ target, headline, content }: IAbout) {
   const globals = await getGlobals()
 
   return (
-    <Section id={target} headline={headline} fullHeight>
+    <Section
+      id={target}
+      headline={headline}
+      fullHeight
+      tabIndex={0}
+      aria-label="About section"
+    >
       <Wrapper>
         <FadeInScroll>
           <div className={styles.copy}>
