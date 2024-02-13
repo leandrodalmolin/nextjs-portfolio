@@ -7,6 +7,7 @@ export async function getGlobals() {
     const data = await hygraph.request<IGlobalsData>(query)
     return data?.globals[0]
   } catch (error) {
-    console.error(error)
+    console.error('Error fetching data:', error)
+    throw new Error('Failed to fetch data')
   }
 }

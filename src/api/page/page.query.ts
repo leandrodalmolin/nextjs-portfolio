@@ -1,4 +1,6 @@
-export const query = `
+import { gql } from 'graphql-request'
+
+export const query = gql`
   query PageQuery($slug: String!) {
     page(where: { slug: $slug }) {
       slug
@@ -59,7 +61,7 @@ export const query = `
                 description
                 siteUrl
                 image {
-                  url(transformation: {document: {output: {format: jpg}}})
+                  url(transformation: { document: { output: { format: jpg } } })
                 }
                 cardColour {
                   hex

@@ -50,3 +50,54 @@ a {
 .overflow-hidden {
   overflow: hidden;
 }
+
+.error,
+.not-found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+
+  h1 {
+    margin-bottom: $spacing-5;
+    font-family: $font-serif;
+    font-size: $font-size-2xl;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-xs;
+    color: $zinc-100;
+
+    @include media-query('sm', 'up') {
+      font-size: $font-size-4xl;
+    }
+  }
+
+  p {
+    margin-bottom: $spacing-7;
+    font-size: $font-size-lg;
+
+    @include media-query('sm', 'up') {
+      font-size: $font-size-xl;
+    }
+  }
+
+  a,
+  button {
+    border: 2px solid rgba($zinc-100, 0.2);
+    border-radius: $radius-md;
+    padding: $spacing-3 $spacing-6;
+    font-size: $font-size-sm;
+    font-weight: $font-weight-bold;
+    color: $zinc-300;
+    background-color: transparent;
+    transition: color 0.3s, border-color 0.3s, background-color 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      border-color: $zinc-100;
+      color: $zinc-900;
+      background-color: $zinc-100;
+    }
+  }
+}
