@@ -23,13 +23,7 @@ export function Card({ title, description, url, imageSrc, bgColor }: ICard) {
             </Link>
           </div>
           <div className={styles.image}>
-            <Image
-              src={imageSrc}
-              alt={title}
-              width={500}
-              height={500}
-              priority
-            />
+            <Image src={imageSrc} alt={title} width={500} height={500} />
           </div>
         </div>
       </FadeInScroll>
