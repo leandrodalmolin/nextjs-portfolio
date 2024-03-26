@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Leandro Dal Molin | Web Developer',
-  description: 'Web developer based in Bristol',
+  title: 'Leandro Dal Molin | Frontend Software Engineer',
+  description: 'Frontend Software Engineer based in Bristol with experience building websites for a range of different industries using technologies like Next.js, React, Javascript, Typescript, HTML, CSS/SASS and PHP.',
   icons: {
     icon: [
       {
