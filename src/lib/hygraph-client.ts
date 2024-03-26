@@ -4,7 +4,9 @@ export const hygraph = new GraphQLClient(process.env.HYGRAPH_URL!, {
   headers: {
     Authorization: `Bearer ${process.env.HYGRAPH_TOKEN}`,
   },
-  next: {
-    revalidate: 60 * 60 * 24,
-  },
+  // Replaced by webhook where the build is triggered
+  // every time CMS data is published
+  // next: {
+  //   revalidate: 60 * 60 * 24,
+  // },
 })
