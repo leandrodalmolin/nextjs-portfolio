@@ -8,14 +8,9 @@ export function Work({ target, headline, works }: IWork) {
   return (
     <Section id={target} headline={headline} theme="light">
       <Wrapper size="xxl">
-        <div className={styles.grid}>
-          {works.map((work, index) => {
-            const lastItem = works.length - 1 === index
-            const itemClasses = cn(styles.item, {
-              [styles['last-item']]: lastItem,
-            })
-            return (
-              <div key={work.id} className={itemClasses}>
+        <ul className={styles.grid}>
+          {works.map((work) => (
+              <li key={work.id} className={styles.item}>
                 <div className={styles['item-container']}>
                   <Card
                     title={work.title}
@@ -25,10 +20,9 @@ export function Work({ target, headline, works }: IWork) {
                     bgColor={work.cardColour.hex}
                   />
                 </div>
-              </div>
-            )
-          })}
-        </div>
+              </li>
+            ))}
+        </ul>
       </Wrapper>
     </Section>
   )
