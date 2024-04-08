@@ -20,7 +20,8 @@
     "react-dom": "^18",
     "react-icons": "^4.12.0",
     "react-scroll": "^1.9.0",
-    "react-transition-group": "^4.4.5"
+    "react-transition-group": "^4.4.5",
+    "use-scramble": "^2.2.15"
   },
   "devDependencies": {
     "@types/lodash.debounce": "^4.0.9",

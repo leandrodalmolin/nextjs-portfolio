@@ -3,6 +3,7 @@
 
 .container {
   @include fade-in(0.3s);
+  @include noise-bg();
   position: relative;
   display: flex;
   justify-content: center;
