@@ -10,7 +10,7 @@ import { INavbar } from './Navbar.types'
 
 export function Navbar({ menuItems }: INavbar) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false)
-  const { isScrolling } = useScrollStatus()
+  const { isScrolling } = useScrollStatus(200)
 
   const handleCloseSidebar = () => {
     setIsSidebarOpen(false)
@@ -23,7 +23,6 @@ export function Navbar({ menuItems }: INavbar) {
 
   const classes = cn(styles.navbar, {
     [styles.open]: isSidebarOpen,
-    [styles.close]: !isSidebarOpen,
     [styles.scroll]: isScrolling,
   })
 

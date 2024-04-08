@@ -6,6 +6,8 @@
   font-size: $font-size-4xl;
   font-weight: $font-weight-bold;
   color: $zinc-200;
+  animation: skew-glitch 10s step-end infinite,
+    polygon-glitch 10s step-end infinite;
 
   span {
     &:last-child {
@@ -13,8 +15,102 @@
     }
   }
 
+  @media (prefers-reduced-motion) {
+    animation: none;
+  }
+
   @include media-query('sm', 'up') {
     font-size: $font-size-5xl;
     line-height: $line-height-xs;
+  }
+}
+
+@keyframes skew-glitch {
+  0% {
+    transform: skew(85deg, 9deg) scaleY(0.2);
+  }
+  30% {
+    transform: skew(-84deg, -9deg) scaleY(0.2);
+  }
+  54% {
+    transform: skew(84deg, 2deg) scaleY(0.15);
+  }
+  90% {
+    transform: skew(-89deg, -2deg) scaleY(0.05);
+  }
+  1%,
+  31%,
+  55%,
+  91% {
+    transform: none;
+  }
+}
+
+@keyframes polygon-glitch {
+  0% {
+    clip-path: polygon(
+      55% 40%,
+      16% 20%,
+      55% 3%,
+      66% 19%,
+      96% 21%,
+      82% 56%,
+      100% 100%,
+      47% 84%,
+      0 100%,
+      36% 55%,
+      5% 34%
+    );
+  }
+  27% {
+    clip-path: polygon(
+      0 0,
+      4% 100%,
+      100% 26%,
+      17% 100%,
+      100% 65%,
+      0 33%,
+      100% 55%,
+      100% 0,
+      74% 0,
+      41% 100%,
+      64% 0
+    );
+  }
+  51% {
+    clip-path: polygon(
+      83% 30%,
+      43% 14%,
+      59% 13%,
+      75% 11%,
+      96% 21%,
+      86% 59%,
+      57% 100%,
+      26% 66%,
+      13% 44%,
+      62% 50%,
+      19% 16%
+    );
+  }
+  86% {
+    clip-path: polygon(
+      0 88%,
+      0 0,
+      100% 0,
+      11% 60%,
+      100% 47%,
+      100% 69%,
+      20% 22%,
+      100% 79%,
+      100% 100%,
+      6% 100%,
+      64% 16%
+    );
+  }
+  1%,
+  28%,
+  53%,
+  87% {
+    clip-path: none;
   }
 }

@@ -13,11 +13,6 @@
     padding: $spacing-3;
   }
 
-  &.close {
-    background-color: rgba($zinc-900, 0.8);
-    backdrop-filter: blur(4px);
-  }
-
   &.scroll {
     .nav {
       padding-block: $spacing-2;
@@ -26,7 +21,13 @@
     .logo {
       > div {
         font-size: $font-size-4xl;
+        animation: none;
       }
+    }
+
+    &:not(.open) {
+      background-color: rgba($zinc-900, 0.8);
+      backdrop-filter: blur(4px);
     }
 
     @include media-query('sm', 'up') {
